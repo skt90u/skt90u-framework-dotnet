@@ -1,0 +1,10 @@
+﻿<browsers>
+  <browser refID="Default">
+    <controlAdapters>
+      <adapter controlType="System.Web.UI.WebControls.Button" 
+               adapterType="JFramework.WebControlAdapter.ButtonAdapter" />
+      <adapter controlType="System.Web.UI.Page" 
+               adapterType="JFramework.WebControlAdapter.PageAdapter" />
+    </controlAdapters>
+  </browser>
+</browsers>

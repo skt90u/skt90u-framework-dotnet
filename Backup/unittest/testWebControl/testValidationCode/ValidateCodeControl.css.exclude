@@ -1,0 +1,16 @@
+﻿a, a:link, a:visited  
+{
+    color: #0082CB; 
+    text-decoration: none;
+}
+
+a:hover  
+{
+    color: #390; 
+    text-decoration: underline;
+}
+
+img{
+    height: 35px;
+    border: 0;
+}

@@ -1,0 +1,621 @@
+﻿/*
+ * how to use WebResource in css
+ * http://stackoverflow.com/questions/1196747/how-to-reference-embedded-images-from-css
+ */
+/*GridViewCSS Chrome Black Style*/
+.ChromeBlack .GridViewStyle
+{
+    font-family: Arial, Sans-Serif;
+    font-size:small;
+    table-layout: auto;
+    border-collapse: collapse;
+    border: #1d1d1d 5px solid;
+}
+/*Header and Pager styles*/
+.ChromeBlack .HeaderStyle, .ChromeBlack .PagerStyle /*Common Styles*/
+{
+    background-image: url(<%=WebResource("JFramework.WebControl.HeaderChrome.jpg")%>);
+    /*background-image: url(Images/HeaderChromeBlack.jpg);*/
+    background-position:center;
+    background-repeat:repeat-x;
+    background-color:#1d1d1d;
+}
+.ChromeBlack .HeaderStyle th
+{
+    padding: 5px;
+    color: #ffffff;
+}
+.ChromeBlack .HeaderStyle a
+{
+    text-decoration:none;
+    color:#ffffff;
+    display:block;
+    text-align:left;
+    font-weight:normal;
+}
+.ChromeBlack .PagerStyle table
+{
+    text-align:center;
+    margin:auto;
+}
+.ChromeBlack .PagerStyle table td
+{
+    border:0px;
+    padding:5px;
+}
+.ChromeBlack .PagerStyle td
+{
+    border-top: #1d1d1d 3px solid;
+}
+.ChromeBlack .PagerStyle a
+{
+    color:#ffffff;
+    text-decoration:none;
+    padding:2px 10px 2px 10px;
+    border-top:solid 1px #777777;
+    border-right:solid 1px #333333;
+    border-bottom:solid 1px #333333;
+    border-left:solid 1px #777777;
+}
+.ChromeBlack .PagerStyle span
+{
+    font-weight:bold;
+    color:#FFFFFF;
+    text-decoration:none;
+    padding:2px 10px 2px 10px;
+}
+/*RowStyles*/
+.ChromeBlack .RowStyle > td, .ChromeBlack .AltRowStyle > td, .ChromeBlack .SelectedRowStyle > td, .ChromeBlack .EditRowStyle > td /*Common Styles*/
+{
+    padding: 5px;
+    border-right: solid 1px #1d1d1d;
+}
+.ChromeBlack .RowStyle > td
+{
+    background-color: #c9c9c9;
+}
+.ChromeBlack .AltRowStyle > td
+{
+    background-color: #f0f0f0;
+}
+.ChromeBlack .SelectedRowStyle > td
+{
+    background-color: #ffff66;
+}
+
+/******************************************************************************/
+
+/*GridViewCSS Chrome Style*/
+.Chrome .GridViewStyle
+{
+    font-family: Arial, Sans-Serif;
+    font-size:small;
+    table-layout: auto;
+    border-collapse: collapse;
+    border:#666 2px solid;
+}
+/*Header and Pager styles*/
+.Chrome .HeaderStyle, .Chrome .PagerStyle /*Common Styles*/
+{
+    background-image: url(<%=WebResource("JFramework.WebControl.HeaderChrome.jpg")%>);
+    /* background-image: url(Images/HeaderChrome.jpg);*/
+    background-position:center;
+    background-repeat:repeat-x;
+    background-color:#1d1d1d;
+	border-bottom: #1d1d1d 1px solid;
+}
+.Chrome .HeaderStyle th
+{
+    padding: 5px;
+    color: #ffffff;
+}
+.Chrome .HeaderStyle a
+{
+    text-decoration:none;
+    color:#ffffff;
+    display:block;
+    text-align:left;
+    font-weight:normal;
+}
+.Chrome .PagerStyle table
+{
+    text-align:center;
+    margin:auto;
+}
+.Chrome .PagerStyle table td
+{
+    border:0px;
+    padding:5px;
+}
+.Chrome .PagerStyle td
+{
+    border-top: #1d1d1d 1px solid;
+}
+.Chrome .PagerStyle a
+{
+    color:#ffffff;
+    text-decoration:none;
+    padding:2px 10px 2px 10px;
+    border-top:solid 1px #777777;
+    border-right:solid 1px #333333;
+    border-bottom:solid 1px #333333;
+    border-left:solid 1px #777777;
+}
+.Chrome .PagerStyle span
+{
+    font-weight:bold;
+    color:#FFFFFF;
+    text-decoration:none;
+    padding:2px 10px 2px 10px;
+}
+/*RowStyles*/
+.Chrome .RowStyle > td, .Chrome .AltRowStyle > td, .Chrome .SelectedRowStyle > td, .Chrome .EditRowStyle > td /*Common Styles*/
+{
+    padding: 5px;
+    border-right: solid 1px #1d1d1d;
+}
+.Chrome .RowStyle > td
+{
+    background-color: #c9c9c9;
+}
+.Chrome .AltRowStyle > td
+{
+    background-color: #f0f0f0;
+}
+.Chrome .SelectedRowStyle > td
+{
+    background-color: #ffff66;
+}
+
+/******************************************************************************/
+
+/*GridViewCSS Gamer Style*/
+.Gamer .GridViewStyle
+{
+    font-family: Arial, Sans-Serif;
+    font-size:small;
+    table-layout: auto;
+    border-collapse: collapse;
+    border: #1d1d1d 1px solid;
+}
+/*Header and Pager styles*/
+.Gamer .HeaderStyle
+{
+    background-image: url(<%=WebResource("JFramework.WebControl.HeaderGamer_left.jpg")%>);
+    /*background-image: url(Images/HeaderGamer_left.jpg);*/
+    background-position:left;
+    background-repeat:repeat-x;
+    height:30px;
+}
+.Gamer .PagerStyle
+{
+    background-image: url(<%=WebResource("JFramework.WebControl.PagerGamer.jpg")%>);
+    /* background-image: url(Images/PagerGamer.jpg); */
+    background-position:bottom;
+    background-repeat:repeat-x;
+	background-color:#000;
+}
+.Gamer .HeaderStyle th
+{
+    padding: 0px;
+    color: #ffffff;
+}
+.Gamer .HeaderStyle a:link, .Gamer .HeaderStyle a:visited
+{
+    text-decoration:none;
+    color:#ffffff;
+    display:block;
+    text-align:left;
+    font-weight:normal;
+    border-left:solid 1px #666666;
+    border-right:solid 1px #1d1d1d;
+    padding-top:25px;
+    padding-bottom:9px;
+    padding-right:5px;
+    padding-left:5px;
+    background-image: url(<%=WebResource("JFramework.WebControl.HeaderGamer.jpg")%>);
+    /* background-image: url(Images/HeaderGamer.jpg); */
+    background-position:top;
+    background-repeat:repeat-x;
+}
+.Gamer .HeaderStyle a:hover
+{
+    background-image: url(<%=WebResource("JFramework.WebControl.HeaderGamer_Hover.jpg")%>);
+    /* background-image: url(Images/HeaderGamer_Hover.jpg); */
+    background-position:top;
+    background-repeat:repeat-x;
+}
+.Gamer .PagerStyle table
+{
+    text-align:center;
+    margin:auto;
+}
+.Gamer .PagerStyle table td
+{
+    border:0px;
+    padding:5px;/*padding around pager numbers */
+}
+.Gamer .PagerStyle td
+{
+    border-top: #1d1d1d 1px solid;/*top border of pager*/
+    height:40px;
+}
+.Gamer .PagerStyle a
+{
+    color:#ffffff;
+    text-decoration:none;
+    padding:2px 10px 2px 10px;
+    /*border around pager numbers*/
+    border-top:solid 1px #777777;
+    border-right:solid 1px #333333;
+    border-bottom:solid 1px #333333;
+    border-left:solid 1px #777777;
+}
+.Gamer .PagerStyle span
+{
+    font-weight:bold;
+    color:#FFFFFF;
+    text-decoration:none;
+    padding:2px 10px 2px 10px;
+}
+/*RowStyles*/
+.Gamer .RowStyle > td, .Gamer .AltRowStyle > td, .Gamer .SelectedRowStyle > td, .Gamer .EditRowStyle > td /*Common Styles*/
+{
+    padding: 5px;
+    border-right: solid 1px #1d1d1d;
+}
+.Gamer .RowStyle > td
+{
+    background-color: #333333;
+    color: #ffffff;
+}
+.Gamer .AltRowStyle > td
+{
+    background-color: #1d1d1d;
+    color:#ffffff;
+}
+.Gamer .SelectedRowStyle > td
+{
+    background-color: #ffff66;
+}
+
+/******************************************************************************/
+
+/*GridViewCSS Glass Black Style*/
+.GlassBlack .GridViewStyle
+{
+    font-family: Arial, Sans-Serif;
+    font-size:small;
+    table-layout: auto;
+    border-collapse: collapse;
+    border: #1d1d1d 5px solid;
+}
+/*Header and Pager styles*/
+.GlassBlack .HeaderStyle, .GlassBlack .PagerStyle /*Common Styles*/
+{
+    background-image: url(<%=WebResource("JFramework.WebControl.HeaderGlassBlack.jpg")%>);
+    /* background-image: url(Images/HeaderGlassBlack.jpg); */
+    background-position:center;
+    background-repeat:repeat-x;
+    background-color:#1d1d1d;
+}
+.GlassBlack .HeaderStyle th
+{
+    padding: 5px;
+    color: #ffffff;
+}
+.GlassBlack .HeaderStyle a
+{
+    text-decoration:none;
+    color:#ffffff;
+    display:block;
+    text-align:left;
+    font-weight:normal;
+}
+.GlassBlack .PagerStyle table
+{
+    text-align:center;
+    margin:auto;
+}
+.GlassBlack .PagerStyle table td
+{
+    border:0px;
+    padding:5px;
+}
+.GlassBlack .PagerStyle td
+{
+    border-top: #1d1d1d 3px solid;
+}
+.GlassBlack .PagerStyle a
+{
+    color:#ffffff;
+    text-decoration:none;
+    padding:2px 10px 2px 10px;
+    border-top:solid 1px #777777;
+    border-right:solid 1px #333333;
+    border-bottom:solid 1px #333333;
+    border-left:solid 1px #777777;
+}
+.GlassBlack .PagerStyle span
+{
+    font-weight:bold;
+    color:#FFFFFF;
+    text-decoration:none;
+    padding:2px 10px 2px 10px;
+}
+/*RowStyles*/
+.GlassBlack .RowStyle > td, .GlassBlack .AltRowStyle > td, .GlassBlack .SelectedRowStyle > td, .GlassBlack .EditRowStyle > td /*Common Styles*/
+{
+    padding: 5px;
+    border-right: solid 1px #1d1d1d;
+}
+.GlassBlack .RowStyle > td
+{
+    background-color: #c9c9c9;
+}
+.GlassBlack .AltRowStyle > td
+{
+    background-color: #f0f0f0;
+}
+.GlassBlack .SelectedRowStyle > td
+{
+    background-color: #ffff66;
+}
+
+/******************************************************************************/
+
+/*GridViewCSS Soft Grey Style*/
+.SoftGrey .GridViewStyle
+{
+    font-family: Arial, Sans-Serif;
+    font-size:small;
+    table-layout: auto;
+    border-collapse: collapse;
+    border:#444 1px solid;
+}
+/*Header and Pager styles*/
+.SoftGrey .HeaderStyle, .SoftGrey .PagerStyle /*Common Styles*/
+{
+    background-image: url(<%=WebResource("JFramework.WebControl.HeaderSoftGrey.jpg")%>);
+    /* background-image: url(Images/HeaderSoftGrey.jpg); */
+    background-position:center;
+    background-repeat:repeat-x;
+    background-color:#1d1d1d;
+}
+.SoftGrey .HeaderStyle th
+{
+    padding: 5px;
+    color: #ffffff;
+}
+.SoftGrey .HeaderStyle a
+{
+    text-decoration:none;
+    color:#ffffff;
+    display:block;
+    text-align:left;
+    font-weight:normal;
+}
+.SoftGrey .PagerStyle table
+{
+    text-align:center;
+    margin:auto;
+}
+.SoftGrey .PagerStyle table td
+{
+    border:0px;
+    padding:5px;
+}
+.SoftGrey .PagerStyle td
+{
+    border-top: #1d1d1d 1px solid;
+}
+.SoftGrey .PagerStyle a
+{
+    color:#ffffff;
+    text-decoration:none;
+    padding:2px 10px 2px 10px;
+    border-top:solid 1px #777777;
+    border-right:solid 1px #333333;
+    border-bottom:solid 1px #333333;
+    border-left:solid 1px #777777;
+}
+.SoftGrey .PagerStyle span
+{
+    font-weight:bold;
+    color:#FFFFFF;
+    text-decoration:none;
+    padding:2px 10px 2px 10px;
+}
+/*RowStyles*/
+.SoftGrey .RowStyle > td, .SoftGrey .AltRowStyle > td, .SoftGrey .SelectedRowStyle > td, .SoftGrey .EditRowStyle > td /*Common Styles*/
+{
+    padding: 5px;
+    border-right: solid 1px #1d1d1d;
+}
+.SoftGrey .RowStyle > td
+{
+    background-color: #c9c9c9;
+}
+.SoftGrey .AltRowStyle > td
+{
+    background-color: #f0f0f0;
+}
+.SoftGrey .SelectedRowStyle > td
+{
+    background-color: #ffff66;
+}
+
+/******************************************************************************/
+
+/*GridViewCSS White Chrome Style*/
+.WhiteChrome .GridViewStyle
+{
+    font-family: Arial, Sans-Serif;
+    font-size:small;
+    table-layout: auto;
+    border-collapse: collapse;
+    border:#999999 1px solid;
+}
+/*Header and Pager styles*/
+.WhiteChrome .HeaderStyle, .WhiteChrome .PagerStyle /*Common Styles*/
+{
+    background-image: url(<%=WebResource("JFramework.WebControl.HeaderWhiteChrome.jpg")%>);
+    /* background-image: url(Images/HeaderWhiteChrome.jpg); */
+    background-position:center;
+    background-repeat:repeat-x;
+    background-color:#fff;
+	border-bottom:solid 1px #999;
+}
+.WhiteChrome .HeaderStyle th
+{
+    padding: 5px;
+    color: #333;
+}
+.WhiteChrome .HeaderStyle a
+{
+    text-decoration:none;
+    color:#333;
+    display:block;
+    text-align:left;
+    font-weight:normal;
+}
+.WhiteChrome .PagerStyle table
+{
+    text-align:center;
+    margin:auto;
+}
+.WhiteChrome .PagerStyle table td
+{
+    border:0px;
+    padding:5px;
+}
+.WhiteChrome .PagerStyle td
+{
+    border-top: #999999 1px solid;
+}
+.WhiteChrome .PagerStyle a
+{
+    color:#333;
+    text-decoration:none;
+    padding:2px 10px 2px 10px;
+    border-top:solid 1px #fff;
+    border-right:solid 1px #999;
+    border-bottom:solid 1px #999;
+    border-left:solid 1px #fff;
+}
+.WhiteChrome .PagerStyle span
+{
+    font-weight:bold;
+    color:#333;
+    text-decoration:none;
+    padding:2px 10px 2px 10px;
+}
+/*RowStyles*/
+.WhiteChrome .RowStyle > td, .WhiteChrome .AltRowStyle > td, .WhiteChrome .SelectedRowStyle > td, .WhiteChrome .EditRowStyle > td /*Common Styles*/
+{
+    padding: 5px;
+    border-right: solid 1px #999;
+}
+.WhiteChrome .RowStyle > td
+{
+    background-color:#E4E4E4;
+}
+.WhiteChrome .AltRowStyle > td
+{
+    background-color: #fff;
+}
+.WhiteChrome .SelectedRowStyle > td
+{
+    background-color:#FF9;
+}
+
+/******************************************************************************/
+
+/*GridViewCSS Soft Grey Style*/
+.Yahoo .GridViewStyle
+{
+    font-family: Arial, Sans-Serif;
+    font-size:small;
+    table-layout: auto;
+    border-collapse: collapse;
+    border:#91a7b4 1px solid;
+}
+/*Header and Pager styles*/
+.Yahoo .HeaderStyle, .Yahoo .PagerStyle /*Common Styles*/
+{
+    background-image: url(<%=WebResource("JFramework.WebControl.YahooSprite.gif")%>);
+    /* background-image: url(Images/YahooSprite.gif); */
+    background-position:top;
+    background-repeat:repeat-x;
+    background-color:#d1dbe0;
+}
+.Yahoo .HeaderStyle th
+{
+    padding: 5px;
+    color: #16387c;
+}
+.Yahoo .HeaderStyle a
+{
+    text-decoration:none;
+    color:#16387c;
+    display:block;
+    text-align:left;
+    font-weight:normal;
+}
+.Yahoo .PagerStyle table
+{
+    text-align:center;
+    margin:auto;
+}
+.Yahoo .PagerStyle table td
+{
+    border:0px;
+    padding:5px;
+}
+.Yahoo .PagerStyle td
+{
+    border-top: #91a7b4 1px solid;
+}
+.Yahoo .PagerStyle a
+{
+    color:#16387c;
+    text-decoration:none;
+    padding:2px 10px 2px 10px;
+    border-top:solid 1px #fff;
+    border-right:solid 1px #91a7b4;
+    border-bottom:solid 1px #91a7b4;
+    border-left:solid 1px #fff;
+}
+.Yahoo .PagerStyle span
+{
+    font-weight:bold;
+    color:#16387c;
+    text-decoration:none;
+    padding:2px 10px 2px 10px;
+}
+/*RowStyles*/
+.Yahoo .RowStyle > td, .Yahoo .AltRowStyle > td, .Yahoo .SelectedRowStyle > td, .Yahoo .EditRowStyle > td /*Common Styles*/
+{
+    padding: 5px;
+    border-right: solid 1px #91a7b4;
+}
+.Yahoo .RowStyle > td
+{
+    background-color: #f1f5f6;
+}
+.Yahoo .AltRowStyle > td
+{
+    background-color: #9ab2ca;
+    background-image: url(<%=WebResource("JFramework.WebControl.YahooSprite.gif")%>);
+	/* background-image: url(Images/YahooSprite.gif); */
+    background-position:0 -80px;
+    background-repeat:repeat-x;
+}
+.Yahoo .SelectedRowStyle > td
+{
+    background-color: #fcb814;
+    background-image: url(<%=WebResource("JFramework.WebControl.YahooSprite.gif")%>);
+	/* background-image: url(Images/YahooSprite.gif); */
+    background-position:center;
+    background-repeat:repeat-x;
+}

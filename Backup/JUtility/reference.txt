@@ -1,0 +1,17 @@
+﻿[what are unmanaged resources]
+http://bytes.com/topic/c-sharp/answers/276059-what-unmanaged-resources
+
+[implement IDisposable]
+http://stackoverflow.com/questions/628752/why-call-disposefalse-in-the-destructor
+
+[How do I tell when there are too many SQL connections]
+http://stackoverflow.com/questions/691751/how-do-i-tell-when-there-are-too-many-sql-connections
+select 
+  COUNT(*) 
+from 
+  master.dbo.sysprocesses p
+join master.dbo.sysdatabases d on p.dbID = d.dbID
+where 
+  d.name = '<database>'
+  
+  

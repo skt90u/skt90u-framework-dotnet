@@ -1,0 +1,21 @@
+﻿/*    <style type="text/css"> */
+
+        input {
+            border: solid 2px #ffffff;
+            margin: -2px;
+        }
+        
+        .form div 
+        {
+            margin-bottom: 5px;
+        }
+        
+        .field_hover {
+            border: dashed 2px #ababab;
+        }
+
+        .field_focus {
+            border: solid 2px Green;
+        }
+        
+/*    </style> */

@@ -1,0 +1,93 @@
+﻿body {
+}
+
+.asyncPostBackPanel {
+    position: absolute;
+    width: 20%;
+    /*left: 100px;
+    top: 200px;*/
+    left: 40%;
+    top: 40%;
+    background-color: #F1F4FA;
+    border: solid 1px #00008B;
+    text-align: left;
+    vertical-align: middle;
+    padding: 10px;
+    font: Verdana;
+    font-weight: bold;
+    font-size: 14pt;
+}  
+
+table { 
+	font: 80% Verdana, Arial, Helvetica, sans-serif;
+	color: #000;
+	text-align: left;
+	border-collapse: collapse;
+	border: 1px solid #666666;
+	border-top: none;
+	width: 740px;	
+}
+
+table a {
+	text-decoration: none;
+}
+
+table a:visited {
+	text-decoration: none;
+}
+
+tr.odd {
+	background-color: #ebf3ff;
+}
+
+tr a {
+	color: #000000;
+}
+
+tr:hover a {
+	color: #ffffff;
+}
+
+
+caption {
+	height: 45px;
+	line-height: 44px;
+	color: #60634E;
+	font-weight: bold;
+	text-align: center;
+	width: 740px;
+	margin: 0;
+	padding: 0;
+	background: #ffffff url(images/captop.jpg) no-repeat;
+	border-left: 2px solid #616161;
+	border-right: 2px solid #616161;
+}
+
+thead th {
+	font-size: 105%;
+	color: #000;
+	background: #ffffff url(images/tbar.gif) repeat-x;
+	height: 33px;
+	text-align: left;
+}
+
+tr {
+	vertical-align: top;
+}
+
+tr,th,td {
+	padding: .25em;
+}
+
+td {
+	border-bottom: 1px solid #dadada;
+}
+
+tfoot tr {
+	background: #fff url(images/bbar.gif) repeat-x;
+}
+
+tfoot td, tfoot th{
+	color: #000;
+	border: 0px;
+}

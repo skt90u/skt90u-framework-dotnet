@@ -1,0 +1,38 @@
+[todo : 如何知道微軟wpf有哪些控件可以用]
+因為有些好用的控件在Toolbox是找不到的
+
+[GridUnitType]
+Auto	The size is determined by the size properties of the content object.
+Pixel	The value is expressed as a pixel.
+Star	The value is expressed as a weighted proportion of available space.
+reference : http://msdn.microsoft.com/en-us/library/system.windows.gridunittype.aspx
+
+[Button HotKey]
+http://social.msdn.microsoft.com/forums/en-US/wpf/thread/49c0e8e9-07ac-4371-b21c-3b30abf85e0b
+
+[Input Key]
+http://msdn.microsoft.com/en-us/library/system.windows.input.key.aspx
+
+[在自訂控件中建立Default Style設定檔]
+(1) The style file must be inside a folder called "Themes" that must be located in the root of the control library project 
+(2) In AssemblyInfo.cs, add following statments
+[assembly: ThemeInfo(
+    ResourceDictionaryLocation.None, //where theme specific resource dictionaries are located
+    //(used if a resource is not found in the page, 
+    // or application resource dictionaries)
+    ResourceDictionaryLocation.SourceAssembly //where the generic resource dictionary is located
+    //(used if a resource is not found in the page, 
+    // app, or any theme specific resource dictionaries)
+)]
+
+TODO : 可否從Generic.xaml 中分離出個別的DefaultStyle.xaml
+http://cn.webdiscussion.info/question/1665781/C-%E4%B8%AD%E7%9A%84WPF%E6%A0%B7%E5%BC%8FGridSplitter
+
+[OpenFileDialog in WPF]
+http://www.c-sharpcorner.com/UploadFile/mahesh/OpenFileDialogwpf08102009142912PM/OpenFileDialogwpf.aspx
+http://www.tanguay.info/web/index.php?pg=codeExamples&id=349
+
+[WPF Dialogs and DialogResult]
+http://marlongrech.wordpress.com/2008/05/28/wpf-dialogs-and-dialogresult/
+
+

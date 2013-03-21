@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RuleSet Name="Migrated rules for jelly-dotnet-framework.WebControl.ruleset" Description="這個規則集是從專案 &quot;E:\GoogleProjectHosting\jelly-dotnet-framework\src\WebControl\jelly-dotnet-framework.WebControl.vbproj&quot; 中 &quot;Debug (Any CPU)&quot; 組態的 CodeAnalysisRules 屬性建立的。" ToolsVersion="10.0">
+  <IncludeAll Action="Warning" />
+  <Rules AnalyzerId="Microsoft.Analyzers.ManagedCodeAnalysis" RuleNamespace="Microsoft.Rules.Managed">
+    <Rule Id="CA1500" Action="Error" />
+    <Rule Id="CA1501" Action="Error" />
+    <Rule Id="CA1502" Action="Error" />
+    <Rule Id="CA1504" Action="Error" />
+    <Rule Id="CA1505" Action="Error" />
+    <Rule Id="CA1506" Action="Error" />
+  </Rules>
+</RuleSet>

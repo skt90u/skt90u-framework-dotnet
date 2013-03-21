@@ -1,0 +1,67 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Main.master.cs" Inherits="Main" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Song Unsung Records</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    
+    <asp:ScriptManager ID="ScriptManager1" runat="server" />                 
+    
+    <!-- header -->
+    <div id="header">
+	    <img src="images/headerleft.png" align="left" alt="" />
+	    <img src="images/headerright.png" align="right" alt="" />        
+	    <div id="headerfill"></div>
+        <div id="headersearch">
+            Artists Search:&nbsp;
+		    <asp:TextBox id="ArtistsSearch" runat="server" CssClass="searchfield" />&nbsp;
+		    <asp:LinkButton ID="LinkButton1" runat="server">Go</asp:LinkButton>            
+        </div>
+       
+        <div id="pageheader">
+            <div id="tabs" >
+	            <asp:DataList ID="DataList1" runat="server" DataSourceID="XmlDataSource1" RepeatDirection="Horizontal" RepeatLayout="Flow">
+		            <ItemTemplate>	
+			            <asp:Label Text='<%# Eval("title") %>' runat="server" id="titleLabel" />
+		            </ItemTemplate>
+		            <ItemStyle CssClass="tab" />
+	            </asp:DataList>
+	            <asp:XmlDataSource runat="server" ID="XmlDataSource1" XPath="/tabs/tab" DataFile="~/App_Data/tabs.xml">
+	            </asp:XmlDataSource>
+            </div>
+            
+<%--            <asp:AutoCompleteExtender ID="ArtistsAutoComplete" runat="server" MinimumPrefixLength="1"
+             ServiceMethod="GetArtists" ServicePath="~/AutoCompleteService.asmx" TargetControlID="ArtistsSearch" />--%>
+            
+	        <div id="content">
+		        <span id="images">
+		            <img class="navigationImage" src="images/banner.gif" alt="Song Unsung Records" />		
+		        </span>
+		    </div>
+        </div>   
+     
+    </div>	
+    
+    <div class="separator"></div>	    
+        
+    <!-- body -->
+    <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+    </asp:contentplaceholder>
+    
+    <!-- footer -->
+    <div class="separator"></div>
+    
+    <div>
+        © 2007 Song Unsung Records : <a href="#">Privacy Policy</a>
+        : <a href="#">Legal information</a> : <a href="#">Contact</a>
+        : <a href="#">Terms and Conditions</a>
+    </div>                  
+            
+    </form>
+</body>
+</html>

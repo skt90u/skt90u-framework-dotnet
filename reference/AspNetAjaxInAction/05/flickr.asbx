@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<bridge namespace="AspNetAjaxInAction" className="FlickrSearch">
+	<proxy type="Microsoft.Web.Preview.Services.BridgeRestProxy"
+		serviceUrl="http://api.flickr.com/services/rest/" />		
+	<method name="Search">
+		<input>
+			<parameter name="method" value="flickr.photos.search" />
+			<parameter name="api_key" value="% appsettings: FlickrAppKey %" />
+			<parameter name="tags" />			
+			<parameter name="content_type" value="1+" />
+			<parameter name="extras" value="tags" />
+		</input>		
+		<transforms>
+		  <transform type="Microsoft.Web.Preview.Services.XPathBridgeTransformer">
+			<data>
+			  <attribute name="selector" value="/rsp/photos/photo" />
+			  <dictionary name="selectedNodes">
+				<item name="ID" value="@id" />
+				<item name="Owner" value="@owner" />
+				<item name="Secret" value="@secret" />
+				<item name="ServerID" value="@server" />
+				<item name="FarmID" value="@farm" />
+				<item name="Title" value="@title" />
+				<item name="Tags" value="@tags" />								
+			  </dictionary>
+			</data>
+		  </transform>
+		</transforms>				
+	</method>
+</bridge>

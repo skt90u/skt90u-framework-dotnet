@@ -1,0 +1,3 @@
+﻿http://blog.miniasp.com/post/2008/04/22/Implement-Delete-Confirm-Using-ASP-NET-20-Control-Adapter-Architecture.aspx
+
+http://cssfriendly.codeplex.com/

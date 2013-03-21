@@ -1,0 +1,22 @@
+﻿div.AspNet-FormView
+{
+	background-color:#EEEEEE;
+}
+div.AspNet-FormView-Data
+{
+	padding:4px;
+}
+div.AspNet-FormView-Data dt
+{
+	font-weight:bold;
+}
+span.AspNet-FormView-ActivePage
+{
+	font-weight:bold;
+	padding:0px 2px;
+}
+.AspNet-FormView-OtherPage, .AspNet-FormView-FirstPage, .AspNet-FormView-NextPage,
+	.AspNet-FormView-PrevPage, .AspNet-FormView-LastPage
+{
+	padding:0px 2px;
+}

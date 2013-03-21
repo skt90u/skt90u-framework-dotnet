@@ -1,0 +1,85 @@
+﻿/*
+.InfoGridview
+{
+    width:100px;
+}
+
+    div.pnlQueryCondition
+    {
+        border: 1px solid #7CABCB;
+        margin:0px;
+        padding:10px;
+        white-space: nowrap;
+        background-color:White;
+    }
+
+    .pnlQueryCondition strong 
+    {
+        color:Green
+    }
+
+    .pnlQueryCondition .text 
+    {
+        margin: 10px 1px 6px 1px;
+        width:21ex;
+    }
+
+    .pnlQueryCondition .button
+    {
+        cursor: pointer;
+        background: url(<%=WebResource("JFramework.WebControl.SearchButton.png")%>) no-repeat;
+        width: 72px;
+        border-width: 0;
+        top:-3px;
+        position:relative;
+        height: 30px;
+    }
+    
+    div.pnlData
+    {
+       border-width:0px;
+       background-color:White;
+    } 
+     
+    .pnlData table
+    { 
+        width:100%;
+    }
+    
+    .pnlData tr.PageStyle
+    {
+        background-color:White;
+    }
+
+    div.pnlCommands
+    {
+        border: 1px solid #7CABCB; 
+        text-align:center;
+        padding:5px;
+        background-color:White;
+    }
+
+    .pnlCommands input.button {
+        background-color:#CCCCCC;
+        background-image: url(<%=WebResource("JFramework.WebControl.ButtonBackground.gif")%>);
+        border-style:solid;
+        border-color:#888888;
+        border-width:1px;
+    }
+
+    .pnlCommands input.button:hover {
+        color: #4040FF;
+        background-color:#DDDDFF;
+        background-image: url(<%=WebResource("JFramework.WebControl.ButtonBackground.gif")%>);
+        border-style:solid;
+        border-color:#5555DD;
+        border-width:1px;
+    }
+
+
+.InfoSelector .modalBackground {
+	background-color:Gray;
+	filter:alpha(opacity=70);
+	opacity:0.7;
+}
+*/

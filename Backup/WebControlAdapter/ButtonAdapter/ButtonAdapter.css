@@ -1,0 +1,15 @@
+﻿.btn01 {
+    background-color:#CCCCCC;
+    background-image: url(<%=WebResource("JFramework.WebControlAdapter.ButtonBackground.gif")%>);
+    border-style:solid;
+    border-color:#888888;
+    border-width:1px;
+}
+.btn01:hover {
+    color: #4040FF;
+    background-color:#DDDDFF;
+    background-image: url(<%=WebResource("JFramework.WebControlAdapter.ButtonBackground.gif")%>);
+    border-style:solid;
+    border-color:#5555DD;
+    border-width:1px;
+}

@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{52573B80-3B62-451B-B8FD-0DB9A2FE03AB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JUtil</RootNamespace>
+    <AssemblyName>JUtil</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>JUtil.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Gurock.SmartInspect, Version=3.0.5.7836, Culture=neutral, PublicKeyToken=a78b0a9303ab7a7c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Log\required\Gurock.SmartInspect.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.2.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Database\required\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Log\required\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="SevenZipSharp">
+      <HintPath>SevenZipLib\required\SevenZipSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Database\required\System.Data.OracleClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite, Version=1.0.66.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Database\required\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Teradata.Client.Provider, Version=12.0.1.0, Culture=neutral, PublicKeyToken=76b417ee2e04956c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Database\required\Teradata.Client.Provider.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="License\ActivationCode.cs" />
+    <Compile Include="License\CertificationCode.cs" />
+    <Compile Include="License\CharMap.cs" />
+    <Compile Include="License\License.cs" />
+    <Compile Include="License\Proxy\LicenseClient.cs" />
+    <Compile Include="License\LicenseManagement.cs" />
+    <Compile Include="License\Product.cs" />
+    <Compile Include="License\Proxy\ClientManager.cs" />
+    <Compile Include="License\Proxy\Command\CmdGetActivationCode.cs" />
+    <Compile Include="License\Proxy\Delegates.cs" />
+    <Compile Include="License\Proxy\EventArgs.cs" />
+    <Compile Include="License\Proxy\LicenseCommand.cs" />
+    <Compile Include="License\Proxy\LicenseServer.cs" />
+    <Compile Include="License\Proxy\MsgType.cs" />
+    <Compile Include="License\Proxy\RetCode.cs" />
+    <Compile Include="License\Proxy\RetMsg.cs" />
+    <Compile Include="License\Proxy\SendMsg.cs" />
+    <Compile Include="License\SerialNumber.cs" />
+    <Compile Include="LiveUpdate\AppCast.cs" />
+    <Compile Include="LiveUpdate\LiveUpdate.cs" />
+    <Compile Include="CodeGenerator\CodeGenBase.cs" />
+    <Compile Include="CodeGenerator\DataGeneratorBase.cs" />
+    <Compile Include="CodeGenerator\ICSharpFile.cs" />
+    <Compile Include="CommandLine\CommandLine.cs" />
+    <Compile Include="CodeGenerator\DalGenerator.cs" />
+    <Compile Include="Database\ConnectionStringParser.cs" />
+    <Compile Include="Database\DbUtil.cs" />
+    <Compile Include="Database\impl\DbConnectionConfig.cs" />
+    <Compile Include="Database\impl\Database.cs" />
+    <Compile Include="Database\enum\DbProvider.cs" />
+    <Compile Include="Database\enum\DbInfo.cs" />
+    <Compile Include="Database\enum\DatabaseType.cs" />
+    <Compile Include="Database\FieldSchema.cs" />
+    <Compile Include="Database\impl\IDatabase.cs" />
+    <Compile Include="Database\impl\LogDatabase.cs" />
+    <Compile Include="Database\SqlParser.cs" />
+    <Compile Include="Database\TableSchema.cs" />
+    <Compile Include="Database\impl\WebDatabase.cs" />
+    <Compile Include="EmailSender\AttachmentEncoding.cs" />
+    <Compile Include="EmailSender\Format.cs" />
+    <Compile Include="EmailSender\GmailSender.cs" />
+    <Compile Include="EmailSender\IEmailSender.cs" />
+    <Compile Include="EmailSender\IRichMessageEmailSender.cs" />
+    <Compile Include="EmailSender\Message.cs" />
+    <Compile Include="EmailSender\MessageAttachment.cs" />
+    <Compile Include="EmailSender\MessageAttachmentList.cs" />
+    <Compile Include="EmailSender\MessagePriority.cs" />
+    <Compile Include="EmailSender\MockSender.cs" />
+    <Compile Include="EmailSender\SmtpSender.cs" />
+    <Compile Include="Environment\Environment.cs" />
+    <Compile Include="Extensions\CharSetConverter.cs" />
+    <Compile Include="Extensions\ExtArrayList.cs" />
+    <Compile Include="Extensions\ExtDataRow.cs" />
+    <Compile Include="Extensions\ExtDataTable.cs" />
+    <Compile Include="Extensions\ExtDateTime.cs" />
+    <Compile Include="Extensions\ExtGeneric.cs" />
+    <Compile Include="Extensions\ExtMethodInfo.cs" />
+    <Compile Include="Extensions\ExtObject.cs" />
+    <Compile Include="Extensions\ExtOrderedDictionary.cs" />
+    <Compile Include="Extensions\ExtStream.cs" />
+    <Compile Include="Extensions\ExtString.cs" />
+    <Compile Include="Extensions\ExtType.cs" />
+    <Compile Include="Extensions\ExtWindowsIdentity.cs" />
+    <Compile Include="Extensions\ExtXmlDocument.cs" />
+    <Compile Include="Extensions\ExtXmlElement.cs" />
+    <Compile Include="Format\Formatter.cs" />
+	<Compile Include="Hardware\Hardware.cs" />
+    <Compile Include="Log\ExtMessageBox\ExternalMessageBox.cs" />
+    <Compile Include="Log\ExtMessageBox\ExtMessageBox.cs" />
+    <Compile Include="Log\ExtMessageBox\ExtMessageBoxCategory.cs" />
+    <Compile Include="Log\ExtMessageBox\ExtMessageBoxImpl\ConsoleMessageBox.cs" />
+    <Compile Include="Log\ExtMessageBox\ExtMessageBoxImpl\WebMessageBox.cs" />
+    <Compile Include="Log\ExtMessageBox\ExtMessageBoxImpl\WinFormMessageBox.cs" />
+    <Compile Include="Log\ExtMessageBox\ExtMessageBoxImpl\WpfMessageBox.cs" />
+    <Compile Include="Log\ExtMessageBox\IExtMessageBox.cs" />
+    <Compile Include="Log\ExtLog.cs" />
+    <Compile Include="Log\ILog.cs" />
+    <Compile Include="Log\Log.cs" />
+    <Compile Include="Log\LoggerImpl\ConsoleLog.cs" />
+    <Compile Include="Log\LoggerImpl\EventLog.cs" />
+    <Compile Include="Log\LoggerImpl\FileLog.cs" />
+    <Compile Include="Log\LoggerImpl\NLog.cs" />
+    <Compile Include="Log\LoggerImpl\SILog.cs" />
+    <Compile Include="Log\LoggerImpl\NoneLog.cs" />
+    <Compile Include="Log\LoggingMode.cs" />
+    <Compile Include="Net\Net.cs" />
+    <Compile Include="OS\Resolution.cs" />
+    <Compile Include="Path\Directory.cs" />
+    <Compile Include="Path\File.cs" />
+    <Compile Include="Process\Process.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reflection\AssemblyAccessor.cs" />
+    <Compile Include="Reflection\Reflect.cs" />
+    <Compile Include="ResourceManagement\ResourceManager.cs" />
+    <Compile Include="ResourceManagement\ResourcesLoader.cs" />
+    <Compile Include="ResourceManagement\SqlFile.cs" />
+    <Compile Include="ResourceManagement\TemplateFile.cs" />
+    <Compile Include="Security\Security.cs" />
+    <Compile Include="Serialization\Binary.cs" />
+    <Compile Include="Serialization\SOAP.cs" />
+    <Compile Include="Serialization\Xml.cs" />
+    <Compile Include="Service\IService.cs" />
+    <Compile Include="Service\IServiceObject.cs" />
+    <Compile Include="Service\ServiceBase.cs" />
+    <Compile Include="Setup\SetupDB.cs" />
+    <Compile Include="SevenZipLib\SevenZipLib.cs" />
+    <Compile Include="Validation\Validation.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SevenZipLib\required\7z.dll" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Database\required\MySql.Data.dll" />
+    <Content Include="Database\required\System.Data.OracleClient.dll" />
+    <Content Include="Database\required\System.Data.SQLite.dll" />
+    <Content Include="Database\required\Teradata.Client.Provider.dll" />
+    <Content Include="Log\required\BvWeb.dll" />
+    <Content Include="Log\required\Gurock.SmartInspect.dll" />
+    <Content Include="Log\required\NLog.dll" />
+    <Content Include="SevenZipLib\required\readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Log\config\NLog.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Log\config\AspNet-NLog.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,217 @@
+﻿/*
+.AspNet-DataList-Header
+{
+	border:solid 1px black;
+}
+.AspNet-DataList-Caption
+{
+	padding:4px;
+	background-color:black;
+	color:white;
+}
+.AspNet-DataList-Alternate
+{
+	background-color:Gray;
+}
+*/
+/* RepeatLayout="Table" */
+.tablesDataList .red
+{
+	color:Red;
+}
+.tablesDataList .highlight
+{
+	background-color:Yellow;
+}
+/* END RepeatLayout="Table" */
+
+/* RepeatLayout="Flow" Multiple Columns Horizontal */
+.flowDataListMultipleColumns .AspNet-DataList
+{
+	width: 600px;
+	margin: 0px;
+	padding: 0px;
+	border: 2px solid #858774;
+	overflow: hidden;
+}
+
+.flowDataListMultipleColumns .AspNet-DataList-Caption
+{
+	background-color: #eaf0b4;
+	border-bottom: 1px dotted #858774;
+	text-align: center;
+}
+.flowDataListMultipleColumns .AspNet-DataList-Header
+{
+	background-color: #eaf0b4;
+	border-bottom: 1px solid #858774;
+	text-align: center;
+}
+
+.flowDataListMultipleColumns .AspNet-DataList-Footer
+{
+	clear: left;
+	background-color: #eaf0b4;
+	border-top: 1px solid #858774;
+	text-align: center;
+}
+
+.flowDataListMultipleColumns .AspNet-DataList-Outer-List
+{
+	display: block;
+	width: 600px;
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	/*overflow: hidden;*/
+}
+
+.flowDataListMultipleColumns .AspNet-DataList-Row
+{
+	display: block;
+	clear: left;
+}
+.flowDataListMultipleColumns .AspNet-DataList-Row-List
+{
+	display: block;
+	float: left;
+	clear: left;
+	margin: 0px;
+	padding: 0px;
+}
+.flowDataListMultipleColumns .AspNet-DataList-Item
+{
+	background-color: #ffff00;
+}
+.flowDataListMultipleColumns .AspNet-DataList-Alternate
+{
+	background-color: #d4d429;
+}
+.flowDataListMultipleColumns .AspNet-DataList-Item, .flowDataListMultipleColumns .AspNet-DataList-Alternate
+{
+ 	display: block;
+	float: left;
+	width: 200px;
+	height: 100px;
+	overflow: hidden;
+}
+/* END RepeatLayout="Flow" Multiple Columns Horizontal  */
+
+/* RepeatLayout="Flow" Multiple Columns Vertical */
+.flowDataListMultipleColumnsVertical .AspNet-DataList
+{
+	width: 600px;
+	margin: 0px;
+	padding: 0px;
+	border: 2px solid #858774;
+	overflow: hidden;
+}
+
+.flowDataListMultipleColumnsVertical .AspNet-DataList-Caption
+{
+	background-color: #eaf0b4;
+	border-bottom: 1px dotted #858774;
+	text-align: center;
+}
+.flowDataListMultipleColumnsVertical .AspNet-DataList-Header
+{
+	background-color: #eaf0b4;
+	border-bottom: 1px solid #858774;
+	text-align: center;
+}
+
+.flowDataListMultipleColumnsVertical .AspNet-DataList-Footer
+{
+	clear: left;
+	background-color: #eaf0b4;
+	border-top: 1px solid #858774;
+	text-align: center;
+}
+
+.flowDataListMultipleColumnsVertical .AspNet-DataList-Outer-List
+{
+	display: block;
+	width: 600px;
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	/*overflow: hidden;*/
+}
+
+.flowDataListMultipleColumnsVertical .AspNet-DataList-Column
+{
+ 	display: block;
+	float: left;
+	width: 200px;
+	height: auto;
+	overflow: hidden;
+}
+.flowDataListMultipleColumnsVertical .AspNet-DataList-Column-List
+{
+	display: block;
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+.flowDataListMultipleColumnsVertical .AspNet-DataList-Item
+{
+	background-color: #ffff00;
+}
+.flowDataListMultipleColumnsVertical .AspNet-DataList-Alternate
+{
+	background-color: #d4d429;
+}
+.flowDataListMultipleColumnsVertical .AspNet-DataList-Item, .flowDataListMultipleColumnsVertical .AspNet-DataList-Alternate
+{
+ 	display: block;
+}
+/* END RepeatLayout="Flow" Multiple Columns Vertical  */
+
+/* RepeatLayout="Flow" Single Column */
+.flowDataListSingleColumn .AspNet-DataList
+{
+	margin: 0px;
+	padding: 0px;
+	width: 600px;
+	border: 2px solid #858774;
+}
+.flowDataListSingleColumn .AspNet-DataList-Caption
+{
+	background-color: #eaf0b4;
+	border-bottom: 1px dotted #858774;
+	text-align: center;
+}
+.flowDataListSingleColumn .AspNet-DataList-Header
+{
+	background-color: #eaf0b4;
+	border-bottom: 1px solid #858774;
+	text-align: center;
+}
+.flowDataListSingleColumn .AspNet-DataList-Footer
+{
+	background-color: #eaf0b4;
+	border-top: 1px solid #858774;
+	text-align: center;
+}
+.flowDataListSingleColumn .AspNet-DataList-Outer-List
+{
+	display: block;
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	width: 600px;
+}
+
+.flowDataListSingleColumn .AspNet-DataList-Item
+{
+	background-color: #ffff00;
+}
+.flowDataListSingleColumn .AspNet-DataList-Alternate
+{
+	background-color: #d4d429;
+}
+.flowDataListSingleColumn .AspNet-DataList-Item, .flowDataListSingleColumn .AspNet-DataList-Alternate
+{
+	display: block;
+}
+/* END RepeatLayout="Flow" Single Column */

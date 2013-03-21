@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Module Name="JFramework.Extension.ExtButton" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>ExtButton.vb</FileName>
+    </TypeIdentifier>
+  </Module>
+  <Module Name="JFramework.Extension.ExtGridview" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAABAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>ExtGridview.vb</FileName>
+    </TypeIdentifier>
+  </Module>
+  <Module Name="JFramework.Extension.ExtGridviewRow" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <Members>
+      <Method Name="ExtractValues" Hidden="true" />
+      <Method Name="GetButton" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAQAA=</HashCode>
+      <FileName>ExtGridviewRow.vb</FileName>
+    </TypeIdentifier>
+  </Module>
+  <Module Name="JFramework.Extension.ExtPage" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ExtPage.vb</FileName>
+    </TypeIdentifier>
+  </Module>
+  <Module Name="JFramework.Extension.ExtWebControl" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>ExtWebControl.vb</FileName>
+    </TypeIdentifier>
+  </Module>
+  <Font Name="新細明體" Size="9" />
+</ClassDiagram>

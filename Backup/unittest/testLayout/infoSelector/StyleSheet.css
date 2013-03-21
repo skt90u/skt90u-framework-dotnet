@@ -1,0 +1,88 @@
+﻿.pnlContainer     
+{
+    /* 定義最小寬度 */
+    min-width:300px;
+    width: auto !important;
+    width: 300px;
+}
+
+.pnlCategory 
+{
+    border: 1px solid #7CABCB; 
+    height: 30px;
+    background: url(sprite.png) repeat-x 0px 0px;
+    color: #0192BF;
+    padding:5px 0px 0px 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+    line-height: 30px;
+}
+
+.pnlQueryCondition 
+{
+    padding:5px 0px 0px 10px;
+    border: 1px solid #7CABCB; 
+    background-color:White;
+    white-space:nowrap;
+}
+.pnlQueryCondition span 
+{
+}
+.pnlQueryCondition span strong 
+{
+    color:Green;
+}
+.pnlQueryCondition input.text
+{
+    width:21ex;
+}
+.pnlQueryCondition input.button
+{
+    cursor: pointer;
+    background: url(SearchButton.png) no-repeat;
+    width: 72px;
+    height: 33px;
+    border-width: 0;
+    vertical-align:middle;
+}
+
+
+.pnlData
+{
+    border-width:0px;
+}
+.pnlData table
+{
+    width:100%;
+}
+
+
+.pnlCommands 
+{
+    border: 1px solid #7CABCB; 
+    background-color:White;
+    text-align:center;
+    padding:5px;
+}
+.pnlCommands input.button {
+    background-color:#CCCCCC;
+    background-image: url(ButtonBackground.gif);
+    border-style:solid;
+    border-color:#888888;
+    border-width:1px;
+}
+.pnlCommands input.button:hover {
+    color: #4040FF;
+    background-color:#DDDDFF;
+    background-image: url(ButtonBackground.gif);
+    border-style:solid;
+    border-color:#5555DD;
+    border-width:1px;
+}
+
+
+.InfoSelector .modalBackground { 
+	background-color:Gray;
+	filter:alpha(opacity=70);
+	opacity:0.7;
+}

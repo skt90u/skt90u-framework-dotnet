@@ -1,0 +1,24 @@
+﻿div.AspNet-DetailsView
+{
+	background-color:#EEEEEE;
+}
+div.AspNet-DetailsView-Data
+{
+	padding:4px;
+}
+span.AspNet-DetailsView-Name
+{
+	font-weight:bold;
+	width:10em;
+	float:left;
+}
+span.AspNet-DetailsView-ActivePage
+{
+	font-weight:bold;
+	padding:0px 2px;
+}
+.AspNet-DetailsView-OtherPage, .AspNet-DetailsView-FirstPage, .AspNet-DetailsView-NextPage,
+	.AspNet-DetailsView-PrevPage, .AspNet-DetailsView-LastPage
+{
+	padding:0px 2px;
+}
