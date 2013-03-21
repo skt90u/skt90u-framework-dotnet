@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0989CD35-F937-4ECF-8CDF-32220CF59D9E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>JFramework.WebControl</RootNamespace>
+    <AssemblyName>JFramework.WebControl</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>http://localhost/JFramework.WebControl/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>JFramework.WebControl.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRules>
+    </CodeAnalysisRules>
+    <CodeAnalysisRuleSet>Migrated rules for jelly-dotnet-framework.WebControl.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>JFramework.WebControl.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRules>
+    </CodeAnalysisRules>
+    <CodeAnalysisRuleSet>Migrated rules for jelly-dotnet-framework.WebControl.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.5.40412.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\package\AjaxControlToolkit\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BlockUI\BlockUI.vb" />
+    <Compile Include="BrowserDetection.vb" />
+    <Compile Include="ClientScriptManager\ClientScriptManager.vb" />
+    <Compile Include="ddcombo\ddcombo.vb" />
+    <Compile Include="GenericEdit\DateEdit\DateEdit.vb" />
+    <Compile Include="GenericEdit\GenericEdit.vb" />
+    <Compile Include="GenericEdit\NumEdit\NumEdit.vb" />
+    <Compile Include="InfoSelector\field\InfoGridViewField.vb" />
+    <Compile Include="InfoSelector\field\FieldCollection.vb" />
+    <Compile Include="InfoSelector\InfoGridview\InfoGridview.vb" />
+    <Compile Include="InfoSelector\InfoGridview\ITemplate\CheckBoxTemplate.vb" />
+    <Compile Include="InfoSelector\InfoGridview\ITemplate\DateEditTemplate.vb" />
+    <Compile Include="InfoSelector\InfoGridview\ITemplate\LabelTemplate.vb" />
+    <Compile Include="InfoSelector\InfoGridview\ITemplate\NumEditTemplate.vb" />
+    <Compile Include="InfoSelector\InfoGridview\ITemplate\RadioButtonTemplate.vb" />
+    <Compile Include="InfoSelector\InfoGridview\ITemplate\XTemplate.vb" />
+    <Compile Include="InfoSelector\InfoSelector.vb" />
+    <Compile Include="lightbox\lightbox.vb" />
+    <Compile Include="uploadify\uploadify.vb" />
+    <Compile Include="ValidateCodeControl\ValidateCodeControl.vb" />
+    <Compile Include="ValidateCodeControl\ValidateCodeImage.vb" />
+    <Compile Include="WebControlUtil.vb" />
+    <Compile Include="XGridView\XGridView.vb" />
+    <Compile Include="XListView\XListView.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="XTextArea\XTextArea.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Migrated rules for jelly-dotnet-framework.WebControl.ruleset" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="GenericEdit\DateEdit\DateEdit.css" />
+    <EmbeddedResource Include="GenericEdit\DateEdit\Calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BlockUI\jquery.blockUI.js" />
+    <Content Include="BlockUI\reference.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ddcombo\css\jquery.ddcombo.css" />
+    <EmbeddedResource Include="ddcombo\css\thickbox.css" />
+    <EmbeddedResource Include="ddcombo\images\indicator.gif" />
+    <EmbeddedResource Include="ddcombo\images\bg.png" />
+    <EmbeddedResource Include="ddcombo\images\button1.png" />
+    <EmbeddedResource Include="ddcombo\images\button2.png" />
+    <EmbeddedResource Include="ddcombo\images\loadingAnimation.gif" />
+    <EmbeddedResource Include="ddcombo\images\transparent_pixel.gif" />
+    <EmbeddedResource Include="ddcombo\js\jquery-1.2.6.min.js" />
+    <EmbeddedResource Include="ddcombo\js\jquery.ajaxQueue.js" />
+    <EmbeddedResource Include="ddcombo\js\jquery.bgiframe.min.js" />
+    <EmbeddedResource Include="ddcombo\js\jquery.ddcombo.js" />
+    <EmbeddedResource Include="ddcombo\js\jquery.dimensions.js" />
+    <EmbeddedResource Include="ddcombo\js\jquery.flydom-3.1.1.js" />
+    <EmbeddedResource Include="ddcombo\js\jquery.ready.js" />
+    <EmbeddedResource Include="ddcombo\js\thickbox-compressed.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="XTextArea\jquery.textareaCounter.css" />
+    <EmbeddedResource Include="XTextArea\jquery.textareaCounter.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="XGridView\XGridView.css" />
+    <EmbeddedResource Include="XGridView\Images\HeaderChrome.jpg" />
+    <EmbeddedResource Include="XGridView\Images\HeaderChromeBlack.jpg" />
+    <EmbeddedResource Include="XGridView\Images\HeaderGamer.jpg" />
+    <EmbeddedResource Include="XGridView\Images\HeaderGamer_Hover.jpg" />
+    <EmbeddedResource Include="XGridView\Images\HeaderGamer_left.jpg" />
+    <EmbeddedResource Include="XGridView\Images\HeaderGlassBlack.jpg" />
+    <EmbeddedResource Include="XGridView\Images\HeaderSoftGrey.jpg" />
+    <EmbeddedResource Include="XGridView\Images\HeaderWhiteChrome.jpg" />
+    <EmbeddedResource Include="XGridView\Images\PagerGamer.jpg" />
+    <EmbeddedResource Include="XGridView\Images\YahooSprite.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="uploadify\css\uploadify.default.css" />
+    <EmbeddedResource Include="uploadify\css\uploadify.css" />
+    <EmbeddedResource Include="uploadify\scripts\uploadify.swf" />
+    <EmbeddedResource Include="uploadify\scripts\jquery-1.3.2.min.js" />
+    <EmbeddedResource Include="uploadify\scripts\jquery.uploadify.v2.1.0.min.js" />
+    <EmbeddedResource Include="uploadify\scripts\swfobject.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ClientScriptManager\AjaxIssues.txt" />
+    <EmbeddedResource Include="InfoSelector\images\ButtonBackground.gif" />
+    <EmbeddedResource Include="InfoSelector\InfoSelector.css" />
+    <EmbeddedResource Include="InfoSelector\images\SearchButton.png" />
+    <EmbeddedResource Include="InfoSelector\InfoGridview\InfoGridview.css" />
+    <EmbeddedResource Include="InfoSelector\InfoGridview\InfoGridview.js" />
+    <EmbeddedResource Include="InfoSelector\InfoGridview\json2.js" />
+    <Content Include="ExtNativeJavascript\console.js" />
+    <Content Include="ExtNativeJavascript\ExtFunction.js" />
+    <Content Include="ExtNativeJavascript\ExtJQuery.js" />
+    <Content Include="ExtNativeJavascript\ExtObject.js" />
+    <EmbeddedResource Include="InfoSelector\images\sprite.png" />
+    <Content Include="ExtNativeJavascript\json2.js" />
+    <Content Include="InfoSelector\InfoGridview\reference.txt" />
+    <Content Include="InfoSelector\InfoSelector.TODO.txt" />
+    <EmbeddedResource Include="lightbox\css\lightbox.css" />
+    <EmbeddedResource Include="lightbox\images\closelabel.gif" />
+    <EmbeddedResource Include="lightbox\images\loading.gif" />
+    <EmbeddedResource Include="lightbox\images\nextlabel.gif" />
+    <EmbeddedResource Include="lightbox\images\prevlabel.gif" />
+    <EmbeddedResource Include="lightbox\js\builder.js" />
+    <EmbeddedResource Include="lightbox\js\effects.js" />
+    <EmbeddedResource Include="lightbox\js\lightbox.js" />
+    <EmbeddedResource Include="lightbox\js\prototype.js" />
+    <Content Include="uploadify\scripts\jquery.uploadify.v2.1.0.js" />
+    <Content Include="XGridView\referemce.txt" />
+    <EmbeddedResource Include="ValidateCodeControl\ValidateCodeControl.css" />
+    <EmbeddedResource Include="ValidateCodeControl\ValidateCodeControl.js" />
+    <EmbeddedResource Include="XTextArea\jquery.elastic.js" />
+    <EmbeddedResource Include="XTextArea\jquery.elastic.source.js" />
+    <EmbeddedResource Include="uploadify\images\button.jpg" />
+    <EmbeddedResource Include="uploadify\scripts\expressInstall.swf" />
+    <EmbeddedResource Include="uploadify\images\cancel.png" />
+    <EmbeddedResource Include="uploadify\scripts\uploadify.sample.js" />
+    <EmbeddedResource Include="jQuery\core\jquery-1.4.4.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Database\jelly-dotnet-framework.Database.vbproj">
+      <Project>{B0786C4B-7B76-4B97-B48F-0401224F47BD}</Project>
+      <Name>jelly-dotnet-framework.Database</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Extension\jelly-dotnet-framework.Extension.vbproj">
+      <Project>{91BFCFB5-8B67-40AF-81E0-A1A76D818003}</Project>
+      <Name>jelly-dotnet-framework.Extension</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Reflection\jelly-dotnet-framework.Reflection.vbproj">
+      <Project>{E79AA5AA-A4F0-4C19-965E-71600BCB9CEB}</Project>
+      <Name>jelly-dotnet-framework.Reflection</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

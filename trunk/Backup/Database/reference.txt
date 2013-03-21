@@ -1,0 +1,145 @@
+﻿[Difference between "throw" and "throw ex" in .NET]
+http://geekswithblogs.net/sdorman/archive/2007/08/20/Difference-between-quotthrowquot-and-quotthrow-exquot-in-.NET.aspx
+
+[Exception.StackTrace 屬性]
+http://msdn.microsoft.com/zh-tw/library/system.exception.stacktrace(v=vs.80).aspx
+
+[Mapping .NET Framework Data Provider Data Types to .NET Framework Data Types]
+http://msdn.microsoft.com/en-us/library/4e5xt97a(vs.71).aspx
+
+http://www.pcreview.co.uk/forums/dbproviderfactory-oracle-and-ref-cursor-t2455252.html
+
+http://msdn.microsoft.com/en-us/library/yk72thhd(v=vs.80).aspx
+
+http://www.devart.com/forums/viewtopic.php?t=18346&sid=6f59e025c72711915f2db01022f59790
+
+Private Class DbParamInfo
+        Public Sub New(ByVal [dbType] As DbType, _
+                       ByVal typeValue As Type, _
+                       ByVal eDbType As Integer)
+            Me.dbType = dbType
+            Me.typeValue = typeValue
+            Me.eDbType = eDbType
+        End Sub
+
+        Public ReadOnly [dbType] As DbType
+        Public ReadOnly typeValue As Type
+        Public ReadOnly eDbType As Integer
+    End Class
+
+    Private Shared ReadOnly arrDbParamInfo() As DbParamInfo = New DbParamInfo() { _
+        New DbParamInfo(DbType.OleDb, Nothing, OleDbType.BSTR), _
+        New DbParamInfo(DbType.OleDb, GetType(String), OleDbType.BSTR), _
+        New DbParamInfo(DbType.OleDb, GetType(DateTime), OleDbType.DBDate), _
+        New DbParamInfo(DbType.OleDb, GetType(TimeSpan), OleDbType.DBTime), _
+        New DbParamInfo(DbType.OleDb, GetType(Double), OleDbType.Double), _
+        New DbParamInfo(DbType.OleDb, GetType(Single), OleDbType.Single), _
+        New DbParamInfo(DbType.OleDb, GetType(Decimal), OleDbType.Decimal), _
+        New DbParamInfo(DbType.OleDb, GetType(Int16), OleDbType.SmallInt), _
+        New DbParamInfo(DbType.OleDb, GetType(Integer), OleDbType.Integer), _
+        New DbParamInfo(DbType.OleDb, GetType(Int64), OleDbType.BigInt), _
+        New DbParamInfo(DbType.OleDb, GetType(UInt16), OleDbType.UnsignedSmallInt), _
+        New DbParamInfo(DbType.OleDb, GetType(UInt32), OleDbType.UnsignedInt), _
+        New DbParamInfo(DbType.OleDb, GetType(UInt64), OleDbType.UnsignedBigInt), _
+        New DbParamInfo(DbType.OleDb, GetType(Boolean), OleDbType.Boolean), _
+ _
+        New DbParamInfo(DbType.Oracle, Nothing, OracleType.VarChar), _
+        New DbParamInfo(DbType.Oracle, GetType(String), OracleType.VarChar), _
+        New DbParamInfo(DbType.Oracle, GetType(DateTime), OracleType.DateTime), _
+        New DbParamInfo(DbType.Oracle, GetType(TimeSpan), OracleType.IntervalDayToSecond), _
+        New DbParamInfo(DbType.Oracle, GetType(Double), OracleType.Double), _
+        New DbParamInfo(DbType.Oracle, GetType(Single), OracleType.Float), _
+        New DbParamInfo(DbType.Oracle, GetType(Decimal), OracleType.Number), _
+        New DbParamInfo(DbType.Oracle, GetType(Integer), OracleType.Int32), _
+        New DbParamInfo(DbType.Oracle, GetType(Int16), OracleType.Int16), _
+        New DbParamInfo(DbType.Oracle, GetType(Int32), OracleType.Int32), _
+        New DbParamInfo(DbType.Oracle, GetType(UInt16), OracleType.UInt16), _
+        New DbParamInfo(DbType.Oracle, GetType(UInt32), OracleType.UInt32), _
+        New DbParamInfo(DbType.Oracle, GetType(Boolean), OracleType.Int16), _
+ _
+        New DbParamInfo(DbType.SqlServer, Nothing, SqlDbType.NChar), _
+        New DbParamInfo(DbType.SqlServer, GetType(String), SqlDbType.NChar), _
+        New DbParamInfo(DbType.SqlServer, GetType(DateTime), SqlDbType.DateTime), _
+        New DbParamInfo(DbType.SqlServer, GetType(Double), SqlDbType.Float), _
+        New DbParamInfo(DbType.SqlServer, GetType(Single), SqlDbType.Real), _
+        New DbParamInfo(DbType.SqlServer, GetType(DateTime), SqlDbType.DateTime), _
+        New DbParamInfo(DbType.SqlServer, GetType(Decimal), SqlDbType.Decimal), _
+        New DbParamInfo(DbType.SqlServer, GetType(Int16), SqlDbType.SmallInt), _
+        New DbParamInfo(DbType.SqlServer, GetType(Int32), SqlDbType.Int), _
+        New DbParamInfo(DbType.SqlServer, GetType(Int64), SqlDbType.BigInt), _
+        New DbParamInfo(DbType.SqlServer, GetType(Integer), SqlDbType.Int), _
+        New DbParamInfo(DbType.SqlServer, GetType(Byte), SqlDbType.TinyInt), _
+        New DbParamInfo(DbType.SqlServer, GetType(UInt16), SqlDbType.SmallInt), _
+        New DbParamInfo(DbType.SqlServer, GetType(UInt32), SqlDbType.Int), _
+        New DbParamInfo(DbType.SqlServer, GetType(UInt64), SqlDbType.BigInt), _
+        New DbParamInfo(DbType.SqlServer, GetType(Boolean), SqlDbType.Bit), _
+        New DbParamInfo(DbType.SqlServer, GetType(Byte()), SqlDbType.Binary) _
+    }
+    
+    
+Public Sub AddParamIn(ByVal cmd As DbCommand, _
+                          ByVal nParam As String, _
+                          ByVal vParam As Object)
+        Dim parameter As DbParameter = AddParam(cmd, nParam, vParam)
+        If parameter IsNot Nothing Then
+            If vParam Is Nothing Then
+                parameter.Value = DBNull.Value
+            Else
+                parameter.Value = vParam
+            End If
+            parameter.Direction = ParameterDirection.Input
+        End If
+    End Sub
+
+    Public Sub AddParamOut(ByVal cmd As DbCommand, _
+                                  ByVal nParam As String, _
+                                  ByVal vParam As Object)
+        Dim parameter As DbParameter = AddParam(cmd, nParam, vParam)
+        If parameter IsNot Nothing Then
+            parameter.Direction = ParameterDirection.Output
+        End If
+    End Sub
+
+    Public Sub AddParamRet(ByVal cmd As DbCommand, _
+                                  ByVal nParam As String, _
+                                  ByVal vParam As Object)
+        Dim parameter As DbParameter = AddParam(cmd, nParam, vParam)
+        If parameter IsNot Nothing Then
+            parameter.Direction = ParameterDirection.ReturnValue
+        End If
+    End Sub
+
+    Private Function GetDbParamInfo(ByVal cmd As DbCommand, ByVal vParam As Object) As Integer
+        For Each info As DbParamInfo In arrDbParamInfo
+            If GetDbType(cmd) <> info.dbType Then Continue For
+
+            If vParam Is Nothing Then
+                If info.typeValue Is Nothing Then Return info.eDbType
+            Else
+                If vParam.GetType().Equals(info.typeValue) Then Return info.eDbType
+            End If
+        Next
+        Debug.Assert(False)
+        Throw New ArgumentException("GetDbParamInfo : Unknown DbParamInfo")
+    End Function
+    Public Function AddParam(ByVal cmd As DbCommand, _
+                                    ByVal nParam As String, _
+                                    ByVal vParam As Object) As DbParameter
+        Select Case GetDbType(cmd)
+            Case DbType.OleDb
+                Dim eDbType As OleDbType = CType(GetDbParamInfo(cmd, vParam), OleDbType)
+                Return CType(cmd, OleDbCommand).Parameters.Add(nParam, eDbType)
+                Exit Select
+            Case DbType.Oracle
+                Dim eDbType As OracleType = CType(GetDbParamInfo(cmd, vParam), OracleType)
+                Return CType(cmd, OracleCommand).Parameters.Add(nParam, eDbType)
+                Exit Select
+            Case DbType.SqlServer
+                Dim eDbType As SqlDbType = CType(GetDbParamInfo(cmd, vParam), SqlDbType)
+                Return CType(cmd, SqlCommand).Parameters.Add(nParam, eDbType)
+                Exit Select
+        End Select
+
+        Debug.Assert(False)
+        Throw New ArgumentException("AddParam : Unknown DbType")
+    End Function    

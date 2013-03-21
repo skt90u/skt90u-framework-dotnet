@@ -1,0 +1,1 @@
+The Declarative Databinding example requires the AdventureWorks database to be present in the App_Data folder.

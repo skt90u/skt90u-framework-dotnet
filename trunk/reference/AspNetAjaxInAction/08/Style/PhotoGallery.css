@@ -1,0 +1,28 @@
+﻿body {
+    color: #B0B0B0;
+    background-color: #292929;
+    font-family: Lucida Sans Unicode;
+    font-size: 8pt;
+}
+
+.photoGallery 
+{
+    width: 50%;
+    margin: auto;
+}
+
+.photoGallery div 
+{
+    text-align: center;
+}
+
+.ctrl_panel img
+{
+}
+
+.ctrl_panel input 
+{
+    height: 50px;
+    width: 50px;
+    margin: 1px;
+}

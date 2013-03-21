@@ -1,0 +1,11 @@
+﻿/*
+div.blockMsg {
+  background-color: #fff;
+  background-image: url(<%=WebResource("WebControlAdapter.indicator.gif")%>);
+  background-position: center center;
+  background-repeat: no-repeat;
+  border: 1px solid #ddd;
+  height: 50px;
+  width: 270px;
+}
+*/

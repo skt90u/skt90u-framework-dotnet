@@ -1,0 +1,3 @@
+﻿function B() {
+    alert('B');
+}

@@ -1,0 +1,35 @@
+﻿[ASP.Net - Javascript inside AJAX UpdatePanel]
+http://stackoverflow.com/questions/1952817/asp-net-javascript-inside-ajax-updatepanel/1953122#1953122
+
+[Sys.Application.add_load vs pageLoad]
+http://msmvps.com/blogs/luisabreu/archive/2009/10/02/sys-application-add-load-vs-pageload.aspx
+
+[Ajax Client Life-Cycle Events]
+http://msdn.microsoft.com/en-us/library/bb386417.aspx
+
+[Page Life Cycle]
+http://msdn.microsoft.com/en-us/library/ms178472.aspx
+
+[js file 次序]
+      test javascript load order
+      (1) head outer js "always be loaded" before ScriptManager.Scripts
+          but each head outer js files has no order
+      (2) all outer js in ScriptManager.Scripts has order
+      (3) the order of outer js files is 
+          (a) [HEAD]
+          (b) [ScriptManager.Scripts]
+          (c) <script></script> behide ScriptManager
+          (d) functio registered in Sys.Application.add_init
+          (e) functio registered in Sys.Application.add_load
+          
+[測試JavaScript載入次序]
+      (1) 在<head></head>中設定外部連結的JavaScript(<script type="text/javascript" src="..."></script>)
+          彼此是沒有順序的, 這表示誰先載入是無法確定的
+      (2) 在<asp:ScriptManager><Scripts><asp:ScriptReference Path="..." /></Scripts></asp:ScriptManager>      
+          定義的JavaScript是有順序性的
+      (3) JavaScript執行的順序
+          (a) [HEAD]中定義
+          (b) [ScriptManager.Scripts]中定義
+          (c) 在ScriptManager之後定義的<script></script>區塊
+          (d) Sys.Application.add_init中註冊的function
+          (e) Sys.Application.add_load中註冊的function

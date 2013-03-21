@@ -1,0 +1,72 @@
+﻿/*    <style type="text/css"> */
+
+        body {
+           font-family:Verdana;
+           font-size:11px;
+        }
+        
+        .widgets { 
+           position:relative;
+           width:710px;
+           height:540px;
+           margin:auto;
+        }
+        
+        .left_col {
+           position:absolute;
+           left:0px;
+           height:520px;
+           width:340px;
+           padding:10px 5px 10px 10px;
+        }
+        
+        .right_col {
+           position:absolute;
+           right:0px;
+           height:520px;
+           width:340px;
+           padding:10px 10px 10px 5px;
+        }
+        
+        .widget {
+           background:#fff;
+           margin-bottom:5px;
+           background:#fff;
+        }
+        
+        .widget_content { 
+           padding:5px;
+           text-align:center;
+        }
+        
+        .widget_handle {
+           height:15px;
+           background:#e5ecf9;
+           overflow:hidden;
+           border-top:solid 1px #3366cc;
+           font-weight:bold;
+           cursor:move;
+        }
+        
+        .drop_cue {
+           border:dashed 1px #ff0000;
+           margin-bottom:5px;
+        }
+        
+        .emptyList
+        {
+           font-weight:bold;
+           text-align:center;
+        }
+        
+        .centered 
+        { 
+            margin:auto; 
+        }
+        
+        .templates 
+        { 
+            visibility:hidden; 
+        }
+        
+/*    </style>  */

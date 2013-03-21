@@ -1,0 +1,3 @@
+SelectRecordCountSQL 處理邏輯要修改, 以下狀況會出錯
+  - 遇到 order by 
+  - 遇到 join sql，使用 select count(*) from (join sql) 

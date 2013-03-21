@@ -1,0 +1,83 @@
+﻿/*
+	dual-listbox CSS.
+*/
+
+/***************************************************
+ * filter
+ **************************************************/
+.dual-listbox input[type=text]
+{
+    width:160px; 
+    margin-bottom:10px;
+}
+ 
+/***************************************************
+ * filter-clear button
+ **************************************************/
+.dual-listbox .clear-button
+{
+    width: 20px;
+    top: 5px;
+    left:5px;
+    position: relative;
+}
+  
+/***************************************************
+ * listbox
+ **************************************************/
+.dual-listbox .select-wrapper
+{
+    float:left;
+    width:200px; /* 設定listbox大小*/
+    height:120px;
+}
+
+.dual-listbox select
+{
+    width:100%;
+    height:100%;
+}
+
+/***************************************************
+ * button
+ **************************************************/
+.dual-listbox ul
+{
+    float:left;
+    margin:0px;
+    padding:10px 10px; /* 設定button間距*/
+    list-style-type: none;
+    
+    position:relative;
+    bottom:-20px; /* stick to bottom */
+}
+
+.dual-listbox li
+{
+    margin: 5px;
+}
+
+/***************************************************
+ * clear floating
+ *
+ * reference : http://www.positioniseverything.net/easyclearing.html
+ **************************************************/
+.clearfix:after {
+	clear: both;
+	content: '.';
+	display: block;
+	visibility: hidden;
+	height: 0;
+}
+
+.clearfix {
+	display: inline-block;
+}
+
+* html .clearfix {
+	height: 1%;
+}
+
+.clearfix {
+	display: block;
+}

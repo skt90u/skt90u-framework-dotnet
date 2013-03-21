@@ -1,0 +1,7 @@
+[Deploy.JFramework2008]
+解決
+警告: 找不到組件 'Teradata.Client.Provider.dll' 的相依性 'TERADATA.NET.SECURITY.TDGSS' (簽章='76B417EE2E04956C' 版本='12.0.1.0')
+http://forums.teradata.com/forum/connectivity/net-teradata-driver-in-gac
+
+警告: 二或多個物件擁有相同的目標位置 ('[targetdir]\jutil.dll')
+警告: 二或多個物件擁有相同的目標位置 ('[targetdir]\jutil.dll')

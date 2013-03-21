@@ -1,0 +1,16 @@
+﻿[Priority]
+
+(1) InfoGridView的 DataBind次數很多, 需要查一下原因
+
+(2) firefox date onselectedchange not work
+
+(3) 檢視選取項與展開全部傻傻分不清
+
+(4) DATE EDIT 效果不如預期
+
+
+當欄位有兩項, 但是只輸入一項目, 就會發生錯誤
+{"DP_DESC":"DP0003-\u53f0\u7063\u91d1\u5eab","ADDRESS":"\u81fa\u5317\u7e23\u677f\u6a4b\u91d1\u5eab\u8def1\u865f"}
+
+初始化轉成Json格式, 由於沒有把所有欄位包涵進去, 就會變成這樣
+{"DP_DESC":"DP0001-\u5167\u6e56\u5009\u5eab"}

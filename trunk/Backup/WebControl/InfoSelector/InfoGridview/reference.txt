@@ -1,0 +1,13 @@
+﻿[Dynamic Template Columns in gridview]
+http://www.developer.com/net/asp/article.php/3609991/Dynamic-Template-Columns-in-the-ASPNET-20-GridView-Control.htm
+
+[How to change the datagrid column header style dynamically]
+http://forums.silverlight.net/forums/p/202967/474325.aspx
+
+[How to check and uncheck a checkbox with jQuery]
+http://www.electrictoolbox.com/check-uncheck-checkbox-jquery/
+
+[class instant to JSON string]
+http://blog.roodo.com/sholfen/archives/8679797.html
+
+[class instant to JSON string]

@@ -1,0 +1,246 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "jelly-dotnet-framework.Extension", "Extension\jelly-dotnet-framework.Extension.vbproj", "{91BFCFB5-8B67-40AF-81E0-A1A76D818003}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "testExtension", "unittest\testExtension\", "{C947197B-084E-42F6-A212-20CA5011F817}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFramework = "3.5"
+		ProjectReferences = "{0989CD35-F937-4ECF-8CDF-32220CF59D9E}|JFramework.WebControl.dll;{91BFCFB5-8B67-40AF-81E0-A1A76D818003}|JFramework.Extension.dll;{B0786C4B-7B76-4B97-B48F-0401224F47BD}|JFramework.Database.dll;{E79AA5AA-A4F0-4C19-965E-71600BCB9CEB}|JFramework.Reflection.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/testExtension"
+		Debug.AspNetCompiler.PhysicalPath = "unittest\testExtension\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\testExtension\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/testExtension"
+		Release.AspNetCompiler.PhysicalPath = "unittest\testExtension\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\testExtension\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "2751"
+		DefaultWebSiteLanguage = "Visual Basic"
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "jelly-dotnet-framework.WebControl", "WebControl\jelly-dotnet-framework.WebControl.vbproj", "{0989CD35-F937-4ECF-8CDF-32220CF59D9E}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "testWebControl", "unittest\testWebControl\", "{A916B4A8-CD85-492F-95CE-DC31C9D7F195}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFramework = "3.5"
+		ProjectReferences = "{91BFCFB5-8B67-40AF-81E0-A1A76D818003}|JFramework.Extension.dll;{B0786C4B-7B76-4B97-B48F-0401224F47BD}|JFramework.Database.dll;{5F22D0BE-5D19-4DE0-922C-3869CB88461C}|JFramework.UnitTestHelper.dll;{E79AA5AA-A4F0-4C19-965E-71600BCB9CEB}|JFramework.Reflection.dll;{0989CD35-F937-4ECF-8CDF-32220CF59D9E}|JFramework.WebControl.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/testWebControl"
+		Debug.AspNetCompiler.PhysicalPath = "unittest\testWebControl\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\testWebControl\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/testWebControl"
+		Release.AspNetCompiler.PhysicalPath = "unittest\testWebControl\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\testWebControl\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "46379"
+		DefaultWebSiteLanguage = "Visual Basic"
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "testDB", "unittest\testDB\testDB.vbproj", "{B72A6368-51DE-484D-9D71-3F213BA27037}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "testLayout", "unittest\testLayout\", "{2EFAA722-AC77-42EA-9EB9-9FB944BD0F80}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFramework = "3.5"
+		ProjectReferences = "{0989CD35-F937-4ECF-8CDF-32220CF59D9E}|JFramework.WebControl.dll;{91BFCFB5-8B67-40AF-81E0-A1A76D818003}|JFramework.Extension.dll;{B0786C4B-7B76-4B97-B48F-0401224F47BD}|JFramework.Database.dll;{E79AA5AA-A4F0-4C19-965E-71600BCB9CEB}|JFramework.Reflection.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/testLayout"
+		Debug.AspNetCompiler.PhysicalPath = "unittest\testLayout\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\testLayout\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/testLayout"
+		Release.AspNetCompiler.PhysicalPath = "unittest\testLayout\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\testLayout\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "1545"
+		DefaultWebSiteLanguage = "Visual Basic"
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "jelly-dotnet-framework.Database", "Database\jelly-dotnet-framework.Database.vbproj", "{B0786C4B-7B76-4B97-B48F-0401224F47BD}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "jelly-dotnet-framework.Reflection", "Reflection\jelly-dotnet-framework.Reflection.vbproj", "{E79AA5AA-A4F0-4C19-965E-71600BCB9CEB}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "testWebControlAdapter", "unittest\testWebControlAdapter\", "{15422C3F-3D29-4AC1-928D-280F7BBF78F8}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFramework = "3.5"
+		ProjectReferences = "{E5439E65-1923-481E-8990-7F7D94A57D13}|JFramework.WebControlAdapter.dll;{0989CD35-F937-4ECF-8CDF-32220CF59D9E}|JFramework.WebControl.dll;{91BFCFB5-8B67-40AF-81E0-A1A76D818003}|JFramework.Extension.dll;{B0786C4B-7B76-4B97-B48F-0401224F47BD}|JFramework.Database.dll;{E79AA5AA-A4F0-4C19-965E-71600BCB9CEB}|JFramework.Reflection.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/testWebControlAdapter"
+		Debug.AspNetCompiler.PhysicalPath = "unittest\testWebControlAdapter\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\testWebControlAdapter\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/testWebControlAdapter"
+		Release.AspNetCompiler.PhysicalPath = "unittest\testWebControlAdapter\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\testWebControlAdapter\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "15324"
+		DefaultWebSiteLanguage = "Visual Basic"
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "jelly-dotnet-framework.WebControlAdapter", "WebControlAdapter\jelly-dotnet-framework.WebControlAdapter.vbproj", "{E5439E65-1923-481E-8990-7F7D94A57D13}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "jelly-dotnet-framework.UnitTestHelper", "UnitTestHelper\jelly-dotnet-framework.UnitTestHelper.vbproj", "{5F22D0BE-5D19-4DE0-922C-3869CB88461C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testWinForm", "unittest\testWinForm\testWinForm.csproj", "{5ECDD00D-0D61-418C-A252-8F39724F3D8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jelly-dotnet-framework.Utility", "JUtility\jelly-dotnet-framework.Utility.csproj", "{7C7DDF51-0A8A-4CE4-8772-1721021D5C13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleTester", "Tests\ConsoleTester.csproj", "{8576FD8A-BD9E-42F5-BACC-8CE344FA54DD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{91BFCFB5-8B67-40AF-81E0-A1A76D818003}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91BFCFB5-8B67-40AF-81E0-A1A76D818003}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91BFCFB5-8B67-40AF-81E0-A1A76D818003}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{91BFCFB5-8B67-40AF-81E0-A1A76D818003}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{91BFCFB5-8B67-40AF-81E0-A1A76D818003}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91BFCFB5-8B67-40AF-81E0-A1A76D818003}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91BFCFB5-8B67-40AF-81E0-A1A76D818003}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{91BFCFB5-8B67-40AF-81E0-A1A76D818003}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{C947197B-084E-42F6-A212-20CA5011F817}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C947197B-084E-42F6-A212-20CA5011F817}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C947197B-084E-42F6-A212-20CA5011F817}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{C947197B-084E-42F6-A212-20CA5011F817}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{C947197B-084E-42F6-A212-20CA5011F817}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{C947197B-084E-42F6-A212-20CA5011F817}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{C947197B-084E-42F6-A212-20CA5011F817}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{C947197B-084E-42F6-A212-20CA5011F817}.Release|Mixed Platforms.Build.0 = Debug|Any CPU
+		{0989CD35-F937-4ECF-8CDF-32220CF59D9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0989CD35-F937-4ECF-8CDF-32220CF59D9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0989CD35-F937-4ECF-8CDF-32220CF59D9E}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{0989CD35-F937-4ECF-8CDF-32220CF59D9E}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{0989CD35-F937-4ECF-8CDF-32220CF59D9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0989CD35-F937-4ECF-8CDF-32220CF59D9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0989CD35-F937-4ECF-8CDF-32220CF59D9E}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{0989CD35-F937-4ECF-8CDF-32220CF59D9E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{A916B4A8-CD85-492F-95CE-DC31C9D7F195}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A916B4A8-CD85-492F-95CE-DC31C9D7F195}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A916B4A8-CD85-492F-95CE-DC31C9D7F195}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{A916B4A8-CD85-492F-95CE-DC31C9D7F195}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{A916B4A8-CD85-492F-95CE-DC31C9D7F195}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{A916B4A8-CD85-492F-95CE-DC31C9D7F195}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{A916B4A8-CD85-492F-95CE-DC31C9D7F195}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{A916B4A8-CD85-492F-95CE-DC31C9D7F195}.Release|Mixed Platforms.Build.0 = Debug|Any CPU
+		{B72A6368-51DE-484D-9D71-3F213BA27037}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B72A6368-51DE-484D-9D71-3F213BA27037}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B72A6368-51DE-484D-9D71-3F213BA27037}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{B72A6368-51DE-484D-9D71-3F213BA27037}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{B72A6368-51DE-484D-9D71-3F213BA27037}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B72A6368-51DE-484D-9D71-3F213BA27037}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B72A6368-51DE-484D-9D71-3F213BA27037}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{B72A6368-51DE-484D-9D71-3F213BA27037}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{2EFAA722-AC77-42EA-9EB9-9FB944BD0F80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EFAA722-AC77-42EA-9EB9-9FB944BD0F80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EFAA722-AC77-42EA-9EB9-9FB944BD0F80}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{2EFAA722-AC77-42EA-9EB9-9FB944BD0F80}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{2EFAA722-AC77-42EA-9EB9-9FB944BD0F80}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EFAA722-AC77-42EA-9EB9-9FB944BD0F80}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{2EFAA722-AC77-42EA-9EB9-9FB944BD0F80}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{2EFAA722-AC77-42EA-9EB9-9FB944BD0F80}.Release|Mixed Platforms.Build.0 = Debug|Any CPU
+		{B0786C4B-7B76-4B97-B48F-0401224F47BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0786C4B-7B76-4B97-B48F-0401224F47BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0786C4B-7B76-4B97-B48F-0401224F47BD}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{B0786C4B-7B76-4B97-B48F-0401224F47BD}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{B0786C4B-7B76-4B97-B48F-0401224F47BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0786C4B-7B76-4B97-B48F-0401224F47BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0786C4B-7B76-4B97-B48F-0401224F47BD}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{B0786C4B-7B76-4B97-B48F-0401224F47BD}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{E79AA5AA-A4F0-4C19-965E-71600BCB9CEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E79AA5AA-A4F0-4C19-965E-71600BCB9CEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E79AA5AA-A4F0-4C19-965E-71600BCB9CEB}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{E79AA5AA-A4F0-4C19-965E-71600BCB9CEB}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{E79AA5AA-A4F0-4C19-965E-71600BCB9CEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E79AA5AA-A4F0-4C19-965E-71600BCB9CEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E79AA5AA-A4F0-4C19-965E-71600BCB9CEB}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{E79AA5AA-A4F0-4C19-965E-71600BCB9CEB}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{15422C3F-3D29-4AC1-928D-280F7BBF78F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15422C3F-3D29-4AC1-928D-280F7BBF78F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15422C3F-3D29-4AC1-928D-280F7BBF78F8}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{15422C3F-3D29-4AC1-928D-280F7BBF78F8}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{15422C3F-3D29-4AC1-928D-280F7BBF78F8}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{15422C3F-3D29-4AC1-928D-280F7BBF78F8}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{15422C3F-3D29-4AC1-928D-280F7BBF78F8}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{15422C3F-3D29-4AC1-928D-280F7BBF78F8}.Release|Mixed Platforms.Build.0 = Debug|Any CPU
+		{E5439E65-1923-481E-8990-7F7D94A57D13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5439E65-1923-481E-8990-7F7D94A57D13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5439E65-1923-481E-8990-7F7D94A57D13}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{E5439E65-1923-481E-8990-7F7D94A57D13}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{E5439E65-1923-481E-8990-7F7D94A57D13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5439E65-1923-481E-8990-7F7D94A57D13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5439E65-1923-481E-8990-7F7D94A57D13}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{E5439E65-1923-481E-8990-7F7D94A57D13}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{5F22D0BE-5D19-4DE0-922C-3869CB88461C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F22D0BE-5D19-4DE0-922C-3869CB88461C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F22D0BE-5D19-4DE0-922C-3869CB88461C}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{5F22D0BE-5D19-4DE0-922C-3869CB88461C}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{5F22D0BE-5D19-4DE0-922C-3869CB88461C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F22D0BE-5D19-4DE0-922C-3869CB88461C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F22D0BE-5D19-4DE0-922C-3869CB88461C}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{5F22D0BE-5D19-4DE0-922C-3869CB88461C}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{5ECDD00D-0D61-418C-A252-8F39724F3D8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5ECDD00D-0D61-418C-A252-8F39724F3D8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5ECDD00D-0D61-418C-A252-8F39724F3D8F}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{5ECDD00D-0D61-418C-A252-8F39724F3D8F}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{5ECDD00D-0D61-418C-A252-8F39724F3D8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5ECDD00D-0D61-418C-A252-8F39724F3D8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5ECDD00D-0D61-418C-A252-8F39724F3D8F}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{5ECDD00D-0D61-418C-A252-8F39724F3D8F}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{7C7DDF51-0A8A-4CE4-8772-1721021D5C13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C7DDF51-0A8A-4CE4-8772-1721021D5C13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C7DDF51-0A8A-4CE4-8772-1721021D5C13}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{7C7DDF51-0A8A-4CE4-8772-1721021D5C13}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{7C7DDF51-0A8A-4CE4-8772-1721021D5C13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C7DDF51-0A8A-4CE4-8772-1721021D5C13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C7DDF51-0A8A-4CE4-8772-1721021D5C13}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{7C7DDF51-0A8A-4CE4-8772-1721021D5C13}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{8576FD8A-BD9E-42F5-BACC-8CE344FA54DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8576FD8A-BD9E-42F5-BACC-8CE344FA54DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8576FD8A-BD9E-42F5-BACC-8CE344FA54DD}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{8576FD8A-BD9E-42F5-BACC-8CE344FA54DD}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{8576FD8A-BD9E-42F5-BACC-8CE344FA54DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8576FD8A-BD9E-42F5-BACC-8CE344FA54DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8576FD8A-BD9E-42F5-BACC-8CE344FA54DD}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{8576FD8A-BD9E-42F5-BACC-8CE344FA54DD}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		Reflector0DestinationAssemblyName = 
+		Reflector0DestinationVersion = 1.0.0.0
+		Reflector0DestinationName = JFramework.Database
+		Reflector0DestinationLocation = C:\Documents and Settings\Administrator\Local Settings\Application Data\Red Gate\.NET Reflector 6\Cache\Originals\130561D2F9D52EA7D26C9C8821324D0D\JFramework.Database.dll
+		Reflector0SourceAssemblyName = 
+		Reflector0SourceVersion = 1.0.0.0
+		Reflector0SourceName = JFramework.Database
+		Reflector0SourceLocation = E:\GoogleProjectHosting\jelly-dotnet-framework\src\unittest\testWebControl\Bin\JFramework.Database.dll
+	EndGlobalSection
+EndGlobal

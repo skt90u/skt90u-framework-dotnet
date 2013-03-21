@@ -1,0 +1,6 @@
+﻿/*
+ * I only figure out using specified class can be supported under ie6
+ */ 
+.InfoGridview input.date {width: 11ex /* yyyy/mm/dd */}
+.InfoGridview input.image{margin-left:1ex;vertical-align:middle}
+.InfoGridview input.number{width: 8ex}

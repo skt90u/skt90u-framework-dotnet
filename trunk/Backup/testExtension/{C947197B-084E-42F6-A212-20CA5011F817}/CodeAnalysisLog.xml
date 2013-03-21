@@ -1,0 +1,408 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files\microsoft visual studio 10.0\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="10.0">
+ <Targets>
+  <Target Name="C:\Documents and Settings\Administrator\Local Settings\Temp\tmp3DD.tmp.cadir\bin\App_Code.dll">
+   <Modules>
+    <Module Name="app_code.dll">
+     <Namespaces>
+      <Namespace Name="">
+       <Types>
+        <Type Name="Helper" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="DeclareTypesInNamespaces" Category="Microsoft.Design" CheckId="CA1050" Status="Active" Created="2011-04-11 05:58:41Z" FixCategory="Breaking">
+           <Issue Certainty="95" Level="Error">'Helper' 應該在命名空間內宣告。</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#getData()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="get" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2011-04-11 05:58:41Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="E:\GoogleProjectHosting\jelly-dotnet-framework\src\unittest\testExtension\App_Code" File="Helper.vb" Line="7">將成員名稱 'Helper.getData()' 中的 'get' 變更成 'Get'，藉此修正其大小寫。</Issue>
+            </Message>
+            <Message TypeName="SetLocaleForDataTypes" Category="Microsoft.Globalization" CheckId="CA1306" Status="Active" Created="2011-04-11 05:58:41Z" FixCategory="NonBreaking">
+             <Issue Certainty="90" Level="Error" Path="E:\GoogleProjectHosting\jelly-dotnet-framework\src\unittest\testExtension\App_Code" File="Helper.vb" Line="8">無論 'Helper.getData()' 在何處建立那個型別的執行個體，請務必設定 DataTable 的 Locale 屬性。</Issue>
+            </Message>
+            <Message Id="System.Int32.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2011-04-11 05:58:41Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="E:\GoogleProjectHosting\jelly-dotnet-framework\src\unittest\testExtension\App_Code" File="Helper.vb" Line="22">因為 'Integer.ToString()' 的行為會隨目前使用者的地區設定而異，請將 'Helper.getData()' 中的這個呼叫以呼叫 'Integer.ToString(IFormatProvider)' 取代。如果要對使用者顯示 'Integer.ToString(IFormatProvider)' 的結果，請指定 'CultureInfo.CurrentCulture()' 做為 'IFormatProvider' 參數。否則，如果要儲存結果供軟體存取 (例如要保存到磁碟或資料庫時)，請指定 'CultureInfo.InvariantCulture()'。</Issue>
+            </Message>
+            <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Active" Created="2011-04-11 05:58:41Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="Warning" Path="E:\GoogleProjectHosting\jelly-dotnet-framework\src\unittest\testExtension\App_Code" File="Helper.vb" Line="7">如果適用的話，請將 'Helper.getData()' 變更成屬性。</Issue>
+            </Message>
+            <Message TypeName="必須在超出範圍前處置物件" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-11 05:58:41Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="E:\GoogleProjectHosting\jelly-dotnet-framework\src\unittest\testExtension\App_Code" File="Helper.vb" Line="8">在方法 'Helper.getData()' 中，物件 'table' 並非沿著所有例外路徑處置。於物件 'table' 的所有參考都超出範圍前對其呼叫 System.IDisposable.Dispose。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+  <Target Name="C:\Documents and Settings\Administrator\Local Settings\Temp\tmp3DD.tmp.cadir\bin\App_Web_3qwwup20.dll">
+   <Modules>
+    <Module Name="app_web_3qwwup20.dll">
+     <Namespaces>
+      <Namespace Name="">
+       <Types>
+        <Type Name="testExtGridview" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message Id="test" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2011-04-11 05:58:41Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="85" Level="Error">將型別名稱 'testExtGridview' 中的 'test' 變更成 'Test'，藉此修正其大小寫。</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="testExtGridviewRow" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message Id="test" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2011-04-11 05:58:41Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="85" Level="Error">將型別名稱 'testExtGridviewRow' 中的 'test' 變更成 'Test'，藉此修正其大小寫。</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#grv_RowDataBound(System.Object,System.Web.UI.WebControls.GridViewRowEventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="grv" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2011-04-11 05:58:41Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="E:\GoogleProjectHosting\jelly-dotnet-framework\src\unittest\testExtension" File="testExtGridviewRow.aspx.vb" Line="13">將成員名稱 'testExtGridviewRow.grv_RowDataBound(Object, GridViewRowEventArgs)' 中的 'grv' 變更成 'Grv'，藉此修正其大小寫。</Issue>
+            </Message>
+            <Message Id="System.Web.UI.WebControls.Button.set_Text(System.String)" TypeName="不要將常值當做已當地語系化的參數傳遞" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2011-04-11 05:58:41Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="E:\GoogleProjectHosting\jelly-dotnet-framework\src\unittest\testExtension" File="testExtGridviewRow.aspx.vb" Line="19">方法 'testExtGridviewRow.grv_RowDataBound(Object, GridViewRowEventArgs)' 在呼叫 'Button.Text.Set(String)' 時傳遞常值字串做為參數 'value'。改為從資源表格擷取下列字串: "This is "。</Issue>
+            </Message>
+            <Message Id="1" TypeName="必須驗證公用方法的引數" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2011-04-11 05:58:41Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="E:\GoogleProjectHosting\jelly-dotnet-framework\src\unittest\testExtension" File="testExtGridviewRow.aspx.vb" Line="14">在外部可見方法 'testExtGridviewRow.grv_RowDataBound(Object, GridViewRowEventArgs)' 中，先驗證參數 'e' 後再使用。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#grv_RowEditing(System.Object,System.Web.UI.WebControls.GridViewEditEventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="grv" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2011-04-11 05:58:41Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="E:\GoogleProjectHosting\jelly-dotnet-framework\src\unittest\testExtension" File="testExtGridviewRow.aspx.vb" Line="24">將成員名稱 'testExtGridviewRow.grv_RowEditing(Object, GridViewEditEventArgs)' 中的 'grv' 變更成 'Grv'，藉此修正其大小寫。</Issue>
+            </Message>
+            <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2011-04-11 05:58:41Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="E:\GoogleProjectHosting\jelly-dotnet-framework\src\unittest\testExtension" File="testExtGridviewRow.aspx.vb" Line="41">因為 'String.Format(String, Object, Object)' 的行為會隨目前使用者的地區設定而異，請將 'testExtGridviewRow.grv_RowEditing(Object, GridViewEditEventArgs)' 中的這個呼叫以呼叫 'String.Format(IFormatProvider, String, ParamArray Object())' 取代。如果要對使用者顯示 'String.Format(IFormatProvider, String, ParamArray Object())' 的結果，請指定 'CultureInfo.CurrentCulture()' 做為 'IFormatProvider' 參數。否則，如果要儲存結果供軟體存取 (例如要保存到磁碟或資料庫時)，請指定 'CultureInfo.InvariantCulture()'。</Issue>
+            </Message>
+            <Message Id="System.Web.UI.WebControls.Label.set_Text(System.String)" TypeName="不要將常值當做已當地語系化的參數傳遞" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2011-04-11 05:58:41Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="E:\GoogleProjectHosting\jelly-dotnet-framework\src\unittest\testExtension" File="testExtGridviewRow.aspx.vb" Line="45">方法 'testExtGridviewRow.grv_RowEditing(Object, GridViewEditEventArgs)' 在呼叫 'Label.Text.Set(String)' 時傳遞常值字串做為參數 'value'。改為從資源表格擷取下列字串: "{, , , :, }"。</Issue>
+            </Message>
+            <Message Id="1" TypeName="必須驗證公用方法的引數" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2011-04-11 05:58:41Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="E:\GoogleProjectHosting\jelly-dotnet-framework\src\unittest\testExtension" File="testExtGridviewRow.aspx.vb" Line="25">在外部可見方法 'testExtGridviewRow.grv_RowEditing(Object, GridViewEditEventArgs)' 中，先驗證參數 'e' 後再使用。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="testExtPage" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message Id="test" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2011-04-11 05:58:41Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="85" Level="Error">將型別名稱 'testExtPage' 中的 'test' 變更成 'Test'，藉此修正其大小寫。</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#TestFindControl(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.Web.UI.WebControls.Label.set_Text(System.String)" TypeName="不要將常值當做已當地語系化的參數傳遞" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2011-04-11 05:58:41Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="E:\GoogleProjectHosting\jelly-dotnet-framework\src\unittest\testExtension" File="testExtPage.aspx.vb" Line="13">方法 'testExtPage.TestFindControl(Object, EventArgs)' 在呼叫 'Label.Text.Set(String)' 時傳遞常值字串做為參數 'value'。改為從資源表格擷取下列字串: "can not find the control"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="E:\GoogleProjectHosting\jelly-dotnet-framework\src\unittest\testExtension" File="testExtPage.aspx.vb" Line="11">方法 'testExtPage.TestFindControl(Object, EventArgs)' 在呼叫 'Label.Text.Set(String)' 時傳遞常值字串做為參數 'value'。改為從資源表格擷取下列字串: "found the control, the value is "。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="testXListView" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message Id="test" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2011-04-11 05:58:41Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="85" Level="Error">將型別名稱 'testXListView' 中的 'test' 變更成 'Test'，藉此修正其大小寫。</Issue>
+          </Message>
+         </Messages>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="ASP">
+       <Types>
+        <Type Name="testextgridview_aspx" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#__BuildControl__control2()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="必須在超出範圍前處置物件" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-11 05:58:41Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="E:\GoogleProjectHosting\jelly-dotnet-framework\src\unittest\testExtension" File="testExtGridview.aspx" Line="6">在方法 'testextgridview_aspx.__BuildControl__control2()' 中，物件 '__ctrl' 並非沿著所有例外路徑處置。於物件 '__ctrl' 的所有參考都超出範圍前對其呼叫 System.IDisposable.Dispose。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="testextgridviewrow_aspx" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#__BuildControl__control10()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Web.UI.WebControls.BoundField.set_HeaderText(System.String)" TypeName="不要將常值當做已當地語系化的參數傳遞" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2011-04-11 05:58:41Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="E:\GoogleProjectHosting\jelly-dotnet-framework\src\unittest\testExtension" File="testExtGridviewRow.aspx" Line="26">方法 'testextgridviewrow_aspx.__BuildControl__control10()' 在呼叫 'BoundField.HeaderText.Set(String)' 時傳遞常值字串做為參數 'value'。改為從資源表格擷取下列字串: "住址"。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#__BuildControl__control2()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="必須在超出範圍前處置物件" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-11 05:58:41Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="E:\GoogleProjectHosting\jelly-dotnet-framework\src\unittest\testExtension" File="testExtGridviewRow.aspx" Line="6">在方法 'testextgridviewrow_aspx.__BuildControl__control2()' 中，物件 '__ctrl' 並非沿著所有例外路徑處置。於物件 '__ctrl' 的所有參考都超出範圍前對其呼叫 System.IDisposable.Dispose。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#__BuildControl__control7()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Web.UI.WebControls.BoundField.set_HeaderText(System.String)" TypeName="不要將常值當做已當地語系化的參數傳遞" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2011-04-11 05:58:41Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="E:\GoogleProjectHosting\jelly-dotnet-framework\src\unittest\testExtension" File="testExtGridviewRow.aspx" Line="23">方法 'testextgridviewrow_aspx.__BuildControl__control7()' 在呼叫 'BoundField.HeaderText.Set(String)' 時傳遞常值字串做為參數 'value'。改為從資源表格擷取下列字串: "座號"。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#__BuildControl__control8()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Web.UI.WebControls.BoundField.set_HeaderText(System.String)" TypeName="不要將常值當做已當地語系化的參數傳遞" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2011-04-11 05:58:41Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="E:\GoogleProjectHosting\jelly-dotnet-framework\src\unittest\testExtension" File="testExtGridviewRow.aspx" Line="24">方法 'testextgridviewrow_aspx.__BuildControl__control8()' 在呼叫 'BoundField.HeaderText.Set(String)' 時傳遞常值字串做為參數 'value'。改為從資源表格擷取下列字串: "姓名"。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#__BuildControl__control9()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Web.UI.WebControls.BoundField.set_HeaderText(System.String)" TypeName="不要將常值當做已當地語系化的參數傳遞" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2011-04-11 05:58:41Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="E:\GoogleProjectHosting\jelly-dotnet-framework\src\unittest\testExtension" File="testExtGridviewRow.aspx" Line="25">方法 'testextgridviewrow_aspx.__BuildControl__control9()' 在呼叫 'BoundField.HeaderText.Set(String)' 時傳遞常值字串做為參數 'value'。改為從資源表格擷取下列字串: "性別"。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="testextpage_aspx" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#__BuildControl__control2()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="必須在超出範圍前處置物件" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-11 05:58:41Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="E:\GoogleProjectHosting\jelly-dotnet-framework\src\unittest\testExtension" File="testExtPage.aspx" Line="6">在方法 'testextpage_aspx.__BuildControl__control2()' 中，物件 '__ctrl' 並非沿著所有例外路徑處置。於物件 '__ctrl' 的所有參考都超出範圍前對其呼叫 System.IDisposable.Dispose。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#__BuildControlbtn()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Web.UI.WebControls.Button.set_Text(System.String)" TypeName="不要將常值當做已當地語系化的參數傳遞" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2011-04-11 05:58:41Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="E:\GoogleProjectHosting\jelly-dotnet-framework\src\unittest\testExtension" File="testExtPage.aspx" Line="13">方法 'testextpage_aspx.__BuildControlbtn()' 在呼叫 'Button.Text.Set(String)' 時傳遞常值字串做為參數 'value'。改為從資源表格擷取下列字串: "Test FindControl"。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="testxlistview_aspx" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#__BuildControl__control11()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="必須在超出範圍前處置物件" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-11 05:58:41Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="E:\GoogleProjectHosting\jelly-dotnet-framework\src\unittest\testExtension" File="testXListView.aspx" Line="26">在方法 'testxlistview_aspx.__BuildControl__control11()' 中，物件 '__ctrl' 並非沿著所有例外路徑處置。於物件 '__ctrl' 的所有參考都超出範圍前對其呼叫 System.IDisposable.Dispose。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#__BuildControl__control12()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="必須在超出範圍前處置物件" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-11 05:58:41Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="E:\GoogleProjectHosting\jelly-dotnet-framework\src\unittest\testExtension" File="testXListView.aspx" Line="27">在方法 'testxlistview_aspx.__BuildControl__control12()' 中，物件 '__ctrl' 並非沿著所有例外路徑處置。於物件 '__ctrl' 的所有參考都超出範圍前對其呼叫 System.IDisposable.Dispose。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#__BuildControl__control14()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="必須在超出範圍前處置物件" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-11 05:58:41Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="E:\GoogleProjectHosting\jelly-dotnet-framework\src\unittest\testExtension" File="testXListView.aspx" Line="30">在方法 'testxlistview_aspx.__BuildControl__control14()' 中，物件 '__ctrl' 並非沿著所有例外路徑處置。於物件 '__ctrl' 的所有參考都超出範圍前對其呼叫 System.IDisposable.Dispose。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#__BuildControl__control2()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="必須在超出範圍前處置物件" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-11 05:58:41Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="E:\GoogleProjectHosting\jelly-dotnet-framework\src\unittest\testExtension" File="testXListView.aspx" Line="10">在方法 'testxlistview_aspx.__BuildControl__control2()' 中，物件 '__ctrl' 並非沿著所有例外路徑處置。於物件 '__ctrl' 的所有參考都超出範圍前對其呼叫 System.IDisposable.Dispose。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#__BuildControl__control5()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="必須在超出範圍前處置物件" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-11 05:58:41Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="E:\GoogleProjectHosting\jelly-dotnet-framework\src\unittest\testExtension" File="testXListView.aspx" Line="18">在方法 'testxlistview_aspx.__BuildControl__control5()' 中，物件 '__ctrl' 並非沿著所有例外路徑處置。於物件 '__ctrl' 的所有參考都超出範圍前對其呼叫 System.IDisposable.Dispose。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#__BuildControl__control7()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="必須在超出範圍前處置物件" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-11 05:58:41Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="E:\GoogleProjectHosting\jelly-dotnet-framework\src\unittest\testExtension" File="testXListView.aspx" Line="21">在方法 'testxlistview_aspx.__BuildControl__control7()' 中，物件 '__ctrl' 並非沿著所有例外路徑處置。於物件 '__ctrl' 的所有參考都超出範圍前對其呼叫 System.IDisposable.Dispose。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#__BuildControl__control8()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="必須在超出範圍前處置物件" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-11 05:58:41Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="E:\GoogleProjectHosting\jelly-dotnet-framework\src\unittest\testExtension" File="testXListView.aspx" Line="22">在方法 'testxlistview_aspx.__BuildControl__control8()' 中，物件 '__ctrl' 並非沿著所有例外路徑處置。於物件 '__ctrl' 的所有參考都超出範圍前對其呼叫 System.IDisposable.Dispose。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#__BuildControl__control9()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="必須在超出範圍前處置物件" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-11 05:58:41Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="E:\GoogleProjectHosting\jelly-dotnet-framework\src\unittest\testExtension" File="testXListView.aspx" Line="23">在方法 'testxlistview_aspx.__BuildControl__control9()' 中，物件 '__ctrl' 並非沿著所有例外路徑處置。於物件 '__ctrl' 的所有參考都超出範圍前對其呼叫 System.IDisposable.Dispose。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#__DataBinding__control11(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="control" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2011-04-11 05:58:41Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="E:\GoogleProjectHosting\jelly-dotnet-framework\src\unittest\testExtension" File="testXListView.aspx" Line="26">將成員名稱 'testxlistview_aspx.__DataBinding__control11(Object, EventArgs)' 中的 'control' 變更成 'Control'，藉此修正其大小寫。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#__DataBinding__control12(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="control" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2011-04-11 05:58:41Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="E:\GoogleProjectHosting\jelly-dotnet-framework\src\unittest\testExtension" File="testXListView.aspx" Line="27">將成員名稱 'testxlistview_aspx.__DataBinding__control12(Object, EventArgs)' 中的 'control' 變更成 'Control'，藉此修正其大小寫。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#__DataBinding__control14(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="control" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2011-04-11 05:58:41Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="E:\GoogleProjectHosting\jelly-dotnet-framework\src\unittest\testExtension" File="testXListView.aspx" Line="30">將成員名稱 'testxlistview_aspx.__DataBinding__control14(Object, EventArgs)' 中的 'control' 變更成 'Control'，藉此修正其大小寫。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#__DataBinding__control7(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="control" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2011-04-11 05:58:41Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="E:\GoogleProjectHosting\jelly-dotnet-framework\src\unittest\testExtension" File="testXListView.aspx" Line="21">將成員名稱 'testxlistview_aspx.__DataBinding__control7(Object, EventArgs)' 中的 'control' 變更成 'Control'，藉此修正其大小寫。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#__DataBinding__control8(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="control" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2011-04-11 05:58:41Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="E:\GoogleProjectHosting\jelly-dotnet-framework\src\unittest\testExtension" File="testXListView.aspx" Line="22">將成員名稱 'testxlistview_aspx.__DataBinding__control8(Object, EventArgs)' 中的 'control' 變更成 'Control'，藉此修正其大小寫。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#__DataBinding__control9(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="control" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2011-04-11 05:58:41Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="E:\GoogleProjectHosting\jelly-dotnet-framework\src\unittest\testExtension" File="testXListView.aspx" Line="23">將成員名稱 'testxlistview_aspx.__DataBinding__control9(Object, EventArgs)' 中的 'control' 變更成 'Control'，藉此修正其大小寫。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="DeclareTypesInNamespaces" Category="Microsoft.Design" CheckId="CA1050">
+   <Name>型別必須在命名空間中宣告</Name>
+   <Description>型別應該在命名空間內定義，以避免重複。</Description>
+   <Resolution Name="Default">{0} 應該在命名空間內宣告。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182134(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709">
+   <Name>識別項名稱應該使用正確的大小寫</Name>
+   <Description>型別、命名空間和成員識別項都是依照 Pascal 命名法的大小寫慣例。參數識別項則都是依照 Camel 命名法的大小寫慣例。這些識別項內兩個字母的縮略字應該使用大寫，例如應該使用 System.IO 而非 System.Io。三個字母以上的縮略字則應該依照 Pascal 命名法的大小寫慣例，例如應該使用 System.Xml 而非 System.XML。Pascal 命名法的大小寫慣例是將每個字的第一個字母大寫，例如 BackColor。Camel 命名法的大小寫慣例則是將第一個字的第一個字母格式設為小寫，並將後續所有字的第一個字母大寫，例如 backgroundColor。雖然兩個字母的縮略字未完全大寫的情況十分常見，但不該因此而排除此規則。例如，'DbConnection' 雖常見，但並不正確，應該 DBConnection 才對。為了與現有的 Unmanaged 符號配置相容，可能需要違反此規則，不過一般來說，在使用這些符號的組件外部看不到它們。</Description>
+   <Resolution Name="Member">將成員名稱 {1} 中的 '{0}' 變更成 '{2}'，藉此修正其大小寫。</Resolution>
+   <Resolution Name="Type">將型別名稱 {1} 中的 '{0}' 變更成 '{2}'，藉此修正其大小寫。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182240(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="85">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="SetLocaleForDataTypes" Category="Microsoft.Globalization" CheckId="CA1306">
+   <Name>必須設定資料型別的地區設定</Name>
+   <Description>在大多數情況下，DataSet 和 DataTable 執行個體上的地區設定應該明確設定為 CultureInfo.InvariantCulture。建立 DataSet 或 DataTable 執行個體時，地區設定會設為目前的文化特性。在大多數情況下，地區設定應該設為 CultureInfo.InvariantCulture，以確保所有文化特性中的排序行為正常。</Description>
+   <Resolution Name="Default">無論 {1} 在何處建立那個型別的執行個體，請務必設定 {0} 的 Locale 屬性。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182188(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">Error</MessageLevel>
+   <File Name="globalizationrules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305">
+   <Name>必須指定 IFormatProvider</Name>
+   <Description>如果有多載採用 IFormatProvider 引數，則應該固定以不採用該引數的多載呼叫。執行階段中的某些方法，會在數值和字串表示之間相互進行轉換，並採用包含一或多個字元且稱為格式規範的字串參數，其會指示轉換值的方式。如果格式規範的含意因文化特性而有所不同，則格式化物件會提供字串表示中使用的實際字元。在文化特性之間的排序和比較行為不應該變更的情節中，請指定 CultureInfo.InvariantCulture，否則便指定 CultureInfo.CurrentCulture。</Description>
+   <Resolution Name="IFormatProviderAlternateString">因為 {0} 的行為會隨目前使用者的地區設定而異，請將 {1} 中的這個呼叫以呼叫 {2} 取代。如果要對使用者顯示 {2} 的結果，請指定 {3} 做為 'IFormatProvider' 參數。否則，如果要儲存結果供軟體存取 (例如要保存到磁碟或資料庫時)，請指定 {4}。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182190(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="globalizationrules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024">
+   <Name>建議在適當時使用屬性</Name>
+   <Description>在大多數情況下，應該使用屬性而非 Get/Set 方法。但在下列情況中則偏好使用方法而非屬性: 作業為轉換、作業高度耗費資源，或可預見作業的副作用; 執行的順序相當重要; 連續呼叫成員兩次會造成不同的結果; 成員為靜態，但傳回可變動的值; 或成員傳回陣列。</Description>
+   <Resolution Name="Default">如果適用的話，請將 {0} 變更成屬性。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182181(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="designrules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="不要將常值當做已當地語系化的參數傳遞" Category="Microsoft.Globalization" CheckId="CA1303">
+   <Name>不要將常值當做已當地語系化的參數傳遞</Name>
+   <Description>內嵌在原始程式碼中的常值字串不容易本地語系化。請避免在一般需要本地語系化字串的情況傳遞常值字串做為引數。</Description>
+   <Resolution Name="KnownValue">方法 {0} 在呼叫 {2} 時傳遞常值字串做為參數 '{1}'。改為從資源表格擷取下列字串: {3}。</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182187(VS.100).aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="必須在超出範圍前處置物件" Category="Microsoft.Reliability" CheckId="CA2000">
+   <Name>必須在超出範圍前處置物件</Name>
+   <Description>如果未在可處置物件的所有參考都超出範圍前明確處置掉該物件，則該物件將在記憶體回收行程執行該物件的完成項時，於某個不定時間被處置掉。因為可能發生例外事件，導致物件的完成項無法執行，所以應改為明確處置掉物件。</Description>
+   <Resolution Name="ExceptionEdge">在方法 {0} 中，物件 {1} 並非沿著所有例外路徑處置。於物件 {1} 的所有參考都超出範圍前對其呼叫 System.IDisposable.Dispose。</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182289(VS.100).aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="必須驗證公用方法的引數" Category="Microsoft.Design" CheckId="CA1062">
+   <Name>必須驗證公用方法的引數</Name>
+   <Description>所有傳遞到外部可見方法的參考引數都必須檢查是否為 null (在 VB 中為 Nothing)。如果適用，應在引數為 null 時擲回 System.ArgumentNullException。</Description>
+   <Resolution Name="Default">在外部可見方法 {0} 中，先驗證參數 '{1}' 後再使用。</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182182(VS.100).aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="10.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">分類</String>
+  <String Key="Certainty">確實性</String>
+  <String Key="CollapseAll">全部摺疊</String>
+  <String Key="CheckId">檢查 ID</String>
+  <String Key="Error">錯誤</String>
+  <String Key="Errors">錯誤</String>
+  <String Key="ExpandAll">全部展開</String>
+  <String Key="Help">說明</String>
+  <String Key="Line">行</String>
+  <String Key="Messages">訊息</String>
+  <String Key="LocationNotStoredInPdb">[位置未儲存在 PDB]</String>
+  <String Key="Project">專案</String>
+  <String Key="Resolution">解析度</String>
+  <String Key="Rule">規則</String>
+  <String Key="RuleFile">規則檔</String>
+  <String Key="RuleDescription">規則描述</String>
+  <String Key="Source">來源</String>
+  <String Key="Status">狀態</String>
+  <String Key="Target">目標</String>
+  <String Key="Warning">警告</String>
+  <String Key="Warnings">警告</String>
+  <String Key="ReportTitle">程式碼分析報告</String>
+ </Localized>
+</FxCopReport>

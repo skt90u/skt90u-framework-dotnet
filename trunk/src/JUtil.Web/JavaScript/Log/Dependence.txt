@@ -1,0 +1,9 @@
+﻿Dependence\jquery.browser.extension.js
+Dependence\jquery.sprintf.js
+Log.js
+Impl\ChromeConsole.js
+Impl\FirefoxConsole.js
+Impl\IEConsole.js
+Impl\SafariConsole.js
+Impl\log4javascript.js
+Impl\EmptyConsole.js

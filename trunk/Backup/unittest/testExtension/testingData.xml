@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sites>
+  <site id="1" url="www.techrepublic.com" title="TechRepublic" />
+  <site id="2" url="www.cnet.com" title="CNET" />
+</sites>

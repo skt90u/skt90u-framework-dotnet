@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6A85060B-57F3-437B-B6B7-5470FB56B766}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JUtil.WinForm</RootNamespace>
+    <AssemblyName>JUtil.WinForm</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>JUtil.WinForm.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="JUtil, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\JFramework\.NET Framework 3.5\JUtil.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="License\ActivationCodeEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="License\ActivationCodeEditor.Designer.cs">
+      <DependentUpon>ActivationCodeEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\ExtCheckedListBox.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Extensions\ExtComboBox.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Extensions\ExtDataGridView.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Extensions\ExtDateTimePicker.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Extensions\ExtListBox.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="License\LicenseEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="License\LicenseEditor.Designer.cs">
+      <DependentUpon>LicenseEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="License\LicenseSender.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="License\LicenseSender.Designer.cs">
+      <DependentUpon>LicenseSender.cs</DependentUpon>
+    </Compile>
+    <Compile Include="License\LicenseActivator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="License\LicenseActivator.Designer.cs">
+      <DependentUpon>LicenseActivator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="License\LicenseManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="License\LicenseManager.Designer.cs">
+      <DependentUpon>LicenseManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="License\ActivationCodeGenerator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="License\ActivationCodeGenerator.Designer.cs">
+      <DependentUpon>ActivationCodeGenerator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NumTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JUtil\Deploy.JUtil2010.csproj">
+      <Project>{52573B80-3B62-451B-B8FD-0DB9A2FE03AB}</Project>
+      <Name>JUtil.4.0</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="License\ActivationCodeEditor.resx">
+      <DependentUpon>ActivationCodeEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="License\LicenseEditor.resx">
+      <DependentUpon>LicenseEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="License\LicenseSender.resx">
+      <DependentUpon>LicenseSender.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="License\LicenseActivator.resx">
+      <DependentUpon>LicenseActivator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="License\LicenseManager.resx">
+      <DependentUpon>LicenseManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="License\ActivationCodeGenerator.resx">
+      <DependentUpon>ActivationCodeGenerator.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

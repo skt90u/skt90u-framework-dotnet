@@ -1,0 +1,12 @@
+﻿/*
+ * I only figure out using specified class can be supported under ie6
+ */ 
+.dateEdit input.text {width: 10ex /* yyyy/mm/dd */}
+.dateEdit input.image{margin-left:1ex;vertical-align:middle}
+
+/*
+ * ie6 does not support attribute selector
+ */ 
+.dateEdit > input[type="text"] {width: 10ex /* yyyy/mm/dd */}
+.dateEdit > input[type="image"]{margin-left:1ex;vertical-align:middle}
+

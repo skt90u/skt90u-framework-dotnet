@@ -1,0 +1,514 @@
+﻿Imports System.Data
+Imports System.Data.Common
+Imports MySql.Data.MySqlClient
+Imports System.Data.SqlClient
+Imports System.Data.OracleClient
+Imports Teradata.Client.Provider
+Imports System.Data.SQLite
+Imports System.Data.OleDb
+Imports System.Collections.Specialized
+
+
+Public Class XDatabase
+
+#Region "Supported Database"
+    Enum DbType
+        MySql = 0
+        SqlServer = 1
+        Oracle = 2
+        Teradata = 3
+        Sqlite = 4
+        OleDb = 5
+    End Enum
+#End Region
+
+#Region "Constructor"
+    Public Sub New(ByVal connectionString As String, ByVal [dbType] As DbType)
+        mConnectionString = connectionString
+        mDbType = dbType
+    End Sub
+#End Region
+
+#Region "SelectRecordCountSQL"
+    ''' <summary>Retrieve data size of [Select] SQL</summary>
+    Public Function SelectRecordCountSQL(ByVal querySQL As String) As Integer
+        Dim recordCount As Integer = 0
+        Try
+            Dim [alias] As String = "RECORDCOUNT"
+            Dim recordCountSQL As String = String.Format("SELECT COUNT(*) AS {0} FROM ({1})", [alias], querySQL)
+            Using dt As DataTable = SelectSQL(recordCountSQL)
+                If dt.Rows.Count = 1 Then
+                    recordCount = CInt(dt.Rows.Item(0).Item([alias]))
+                End If
+            End Using
+        Catch ex As Exception
+            ' in order to hold stack trace information,
+            ' we need use [Throw] instead of [Throw ex]
+            Throw
+        End Try
+        Return recordCount
+    End Function
+#End Region
+
+#Region "SelectSQL"
+    ''' <summary>Execute [Select] SQL</summary>
+    Public Function SelectSQL(ByVal querySQL As String) As DataTable
+        Dim dt As DataTable = Nothing
+        Try
+            Dim connectionString As String = mConnectionString
+            Dim [dbType] As DbType = mDbType
+            Using cn As DbConnection = CreateDbConnection(connectionString, [dbType])
+                Using cmd As DbCommand = CreateDbCommand(cn)
+                    cmd.CommandText = querySQL
+
+                    Using theReader As DbDataReader = cmd.ExecuteReader()
+                        dt = New DataTable()
+
+                        For i As Integer = 0 To theReader.FieldCount - 1
+                            Dim curColumn As DataColumn = New DataColumn(theReader.GetName(i))
+                            dt.Columns.Add(curColumn)
+                        Next
+
+                        While theReader.Read()
+                            Dim curRow As DataRow = dt.NewRow()
+                            For n As Integer = 0 To theReader.FieldCount - 1
+                                curRow.Item(theReader.GetName(n)) = theReader.GetValue(n)
+                            Next
+                            dt.Rows.Add(curRow)
+                        End While
+                    End Using ' DbDataReader
+                End Using ' DbCommand
+            End Using ' DbConnection
+        Catch ex As Exception
+            ' in order to hold stack trace information,
+            ' we need use [Throw] instead of [Throw ex]
+            Throw
+        End Try
+        Return dt
+    End Function
+#End Region
+
+#Region "ExecuteSQL"
+    ''' <summary>Execute [Insert] [Update] [Delete] SQL</summary>
+    Public Sub ExecuteSQL(ByVal lstSQL As List(Of String))
+        Try
+            Dim connectionString As String = mConnectionString
+            Dim [dbType] As DbType = mDbType
+            Using connection As DbConnection = CreateDbConnection(connectionString, dbType)
+                Using command As DbCommand = CreateDbCommand(connection)
+                    Using transaction As DbTransaction = CreateTransaction(connection, command)
+
+                        Try
+                            For Each sql As String In lstSQL
+                                command.CommandText = sql
+                                command.ExecuteNonQuery()
+                            Next
+                            transaction.Commit()
+                        Catch exExecuteSQL As Exception
+                            Try
+                                transaction.Rollback()
+                            Catch exRollback As Exception
+                                Throw exRollback
+                            End Try
+                            Throw exExecuteSQL
+                        End Try
+                    End Using 'DbTransaction
+                End Using 'DbCommand
+            End Using 'DbConnection
+        Catch ex As Exception
+            ' in order to hold stack trace information,
+            ' we need use [Throw] instead of [Throw ex]
+            Throw
+        End Try
+    End Sub
+#End Region
+
+#Region "GetSchemaTable"
+    ''' <summary>擷取資料行的結構描述</summary>
+    ''' <remarks>
+    ''' Reference : http://support.microsoft.com/kb/310107/zh-tw
+    ''' </remarks>
+    Public Function GetSchemaTable(ByVal querySQL As String) As DataTable
+        Dim dt As DataTable = Nothing
+        Try
+            Dim connectionString As String = mConnectionString
+            Dim [dbType] As DbType = mDbType
+            Using connection As DbConnection = CreateDbConnection(connectionString, [dbType])
+                Using command As DbCommand = CreateDbCommand(connection)
+                    command.CommandText = querySQL
+                    Using aReader As DbDataReader = command.ExecuteReader(CommandBehavior.KeyInfo)
+                        dt = aReader.GetSchemaTable()
+                    End Using 'DbDataReader
+                End Using 'DbCommand
+            End Using 'DbConnection
+        Catch ex As Exception
+            ' in order to hold stack trace information,
+            ' we need use [Throw] instead of [Throw ex]
+            Throw
+        End Try
+        Return dt
+    End Function
+#End Region
+
+#Region "Private"
+
+    Private ReadOnly mConnectionString As String
+    Private ReadOnly mDbType As DbType
+
+    Private Class DbInfo
+        Public Sub New(ByVal [dbType] As DbType, _
+                       ByVal Provider As String, _
+                       ByVal typeConnection As Type, _
+                       ByVal typeCommand As Type)
+            Me.dbType = dbType
+            Me.Provider = Provider
+            Me.typeConnection = typeConnection
+            Me.typeCommand = typeCommand
+        End Sub
+
+        Public ReadOnly [dbType] As DbType
+        Public ReadOnly Provider As String
+        Public ReadOnly typeConnection As Type
+        Public ReadOnly typeCommand As Type
+    End Class
+
+    Private Shared ReadOnly arrDbInfo() As DbInfo = New DbInfo() { _
+        New DbInfo(DbType.MySql, "MySql.Data.MySqlClient", GetType(MySqlConnection), GetType(MySqlCommand)), _
+        New DbInfo(DbType.SqlServer, "System.Data.SqlClient", GetType(SqlConnection), GetType(SqlCommand)), _
+        New DbInfo(DbType.Oracle, "System.Data.OracleClient", GetType(OracleConnection), GetType(OracleCommand)), _
+        New DbInfo(DbType.Teradata, "Teradata.Client.Provider", GetType(TdConnection), GetType(TdCommand)), _
+        New DbInfo(DbType.Sqlite, "System.Data.SQLite", GetType(SQLiteConnection), GetType(SQLiteCommand)), _
+        New DbInfo(DbType.OleDb, "System.Data.OleDb", GetType(OleDbConnection), GetType(OleDbCommand)) _
+    }
+
+    ''' <summary>根據目前連線,取得對應的資料庫類型</summary>
+    Private Shared Function GetDbType(ByVal aDbConnection As DbConnection) As DbType
+        For Each [dbInfo] As DbInfo In arrDbInfo
+            If dbInfo.typeConnection.Equals(aDbConnection.GetType()) Then
+                Return dbInfo.dbType
+            End If
+        Next
+
+        Debug.Assert(False)
+        Throw New ArgumentException("ConnectionType : Unknown DbConnection type")
+    End Function
+
+    ''' <summary>根據目前DbCommand,取得對應的資料庫類型</summary>
+    Private Shared Function GetDbType(ByVal aDbCommand As DbCommand) As DbType
+        For Each [dbInfo] As DbInfo In arrDbInfo
+            If dbInfo.typeCommand.Equals(aDbCommand.GetType()) Then
+                Return dbInfo.dbType
+            End If
+        Next
+
+        Debug.Assert(False)
+        Throw New ArgumentException("CommandType : Unknown DbCommand type")
+    End Function
+
+    ''' <summary>根據DbType,取得對應的DbProviderFactory</summary>
+    Private Shared Function GetDbProviderFactory(ByVal aDbType As DbType) As DbProviderFactory
+        Try
+            Dim Provider As String = ""
+            For Each [dbInfo] As DbInfo In arrDbInfo
+                If dbInfo.dbType = aDbType Then
+                    Provider = dbInfo.Provider
+                    Exit For
+                End If
+            Next
+            Dim aFactory As DbProviderFactory = DbProviderFactories.GetFactory(Provider)
+            Return aFactory
+        Catch ex As Exception
+            ' in order to hold stack trace information,
+            ' we need use [Throw] instead of [Throw ex]
+            Throw
+        End Try
+    End Function
+
+    ''' <summary>根據目前連線,取得對應的DbProviderFactory</summary>
+    Private Shared Function GetDbProviderFactory(ByVal aDbConnection As DbConnection) As DbProviderFactory
+        Try
+            Dim aDbType As DbType = GetDbType(aDbConnection)
+            Return GetDbProviderFactory(aDbType)
+        Catch ex As Exception
+            ' in order to hold stack trace information,
+            ' we need use [Throw] instead of [Throw ex]
+            Throw
+        End Try
+    End Function
+
+    ''' <summary>根據DbType,取得對應的DataAdapter</summary>
+    Private Shared Function CreateDataAdapter(ByVal aDbType As DbType) As System.Data.Common.DataAdapter
+        Dim adapter As DataAdapter = Nothing
+        Try
+            adapter = GetDbProviderFactory(aDbType).CreateDataAdapter()
+        Catch ex As Exception
+            ' in order to hold stack trace information,
+            ' we need use [Throw] instead of [Throw ex]
+            Throw
+        End Try
+        Return adapter
+    End Function
+
+    ''' <summary>根據連線字串以及資料庫類型,建立資料庫連線</summary>
+    Private Shared Function CreateDbConnection(ByVal aConnectionString As String, ByVal aDbType As DbType) As DbConnection
+        Try
+            Dim aFactory As DbProviderFactory = GetDbProviderFactory(aDbType)
+            Dim aDbConnection As DbConnection = aFactory.CreateConnection()
+            aDbConnection.ConnectionString = aConnectionString
+            Return aDbConnection
+        Catch ex As Exception
+            ' in order to hold stack trace information,
+            ' we need use [Throw] instead of [Throw ex]
+            Throw
+        End Try
+    End Function
+
+    Private Shared Function CreateDbCommand(ByVal aDbConnection As DbConnection) As DbCommand
+        If aDbConnection Is Nothing Then Throw New ArgumentException("CreateCommand : aDbConnection is null")
+        Try
+            If aDbConnection.State = ConnectionState.Closed Then aDbConnection.Open()
+
+            Dim aFactory As DbProviderFactory = GetDbProviderFactory(aDbConnection)
+            Dim aDbCommand As DbCommand = aFactory.CreateCommand()
+            aDbCommand.Connection = aDbConnection
+
+            Return aDbCommand
+        Catch ex As Exception
+            ' in order to hold stack trace information,
+            ' we need use [Throw] instead of [Throw ex]
+            Throw
+        End Try
+    End Function
+
+    Private Shared Function CreateTransaction(ByVal aDbConnection As DbConnection, ByVal aDbCommand As DbCommand) As DbTransaction
+        If aDbConnection Is Nothing Then Throw New ArgumentException("CreateCommand : aDbConnection is null")
+        Try
+            If aDbConnection.State = ConnectionState.Closed Then aDbConnection.Open()
+            Dim transaction As DbTransaction = aDbConnection.BeginTransaction()
+            aDbCommand.Transaction = transaction
+            Return transaction
+        Catch ex As Exception
+            ' in order to hold stack trace information,
+            ' we need use [Throw] instead of [Throw ex]
+            Throw
+        End Try
+    End Function
+
+    ' disable Default Ctor
+    Private Sub New()
+    End Sub
+#End Region
+
+#Region "StoredProcedure"
+
+    Public Sub ExecuteSP(ByVal ProcedureName As String, _
+                         ByVal InParam As OrderedDictionary, _
+                         Optional ByVal OutParam As OrderedDictionary = Nothing, _
+                         Optional ByVal RetParam As OrderedDictionary = Nothing)
+        Try
+            Dim connectionString As String = mConnectionString
+            Dim [dbType] As DbType = mDbType
+            Using cn As DbConnection = CreateDbConnection(connectionString, [dbType])
+                Using cmd As DbCommand = CreateDbCommand(cn)
+                    cmd.CommandType = Data.CommandType.StoredProcedure
+                    cmd.CommandText = ProcedureName
+                    AddDbParameters(cmd, InParam, ParameterDirection.Input)
+                    AddDbParameters(cmd, OutParam, ParameterDirection.Output)
+                    AddDbParameters(cmd, RetParam, ParameterDirection.ReturnValue)
+                    cmd.ExecuteNonQuery()
+                    RetrieveDbParameters(cmd, InParam)
+                    RetrieveDbParameters(cmd, OutParam)
+                    RetrieveDbParameters(cmd, RetParam)
+                End Using
+            End Using
+        Catch ex As Exception
+            Throw
+        End Try
+    End Sub
+
+    Private Sub AddDbParameters(ByVal cmd As DbCommand, _
+                                    ByVal Param As OrderedDictionary, _
+                                    ByVal direction As ParameterDirection)
+        Try
+            If Param Is Nothing Then Return
+            For Each de As DictionaryEntry In Param
+                Dim nParam As String = de.Key.ToString()
+                Dim vParam As Object = de.Value
+                Dim parameter As DbParameter = CreateDbParameter(nParam, vParam, direction)
+                cmd.Parameters.Add(parameter)
+            Next
+        Catch ex As Exception
+            Throw
+        End Try
+    End Sub
+
+    Private Sub RetrieveDbParameters(ByVal cmd As DbCommand, _
+                                    ByVal Param As OrderedDictionary)
+        Try
+            If Param Is Nothing Then Return
+            For Each de As DictionaryEntry In Param
+                Dim nParam As String = de.Key.ToString()
+                de.Value = cmd.Parameters(nParam).Value
+            Next
+        Catch ex As Exception
+            Throw
+        End Try
+    End Sub
+
+    Private Function CreateDbParameter(ByVal nParam As String, _
+                                       ByVal vParam As Object, _
+                                       ByVal direction As ParameterDirection) As DbParameter
+        Try
+            Dim factory As DbProviderFactory = GetDbProviderFactory(mDbType)
+            Dim parameter As DbParameter = factory.CreateParameter()
+            parameter.DbType = GetDbParameterType(vParam)
+            parameter.Direction = direction
+            parameter.ParameterName = nParam
+            If direction = ParameterDirection.Input Then
+                parameter.Value = IIf(vParam Is Nothing, DBNull.Value, vParam)
+            End If
+            Return parameter
+        Catch ex As Exception
+            Throw
+        End Try
+    End Function
+
+    Private Function GetDbParameterType(ByVal vParam As Object) As Data.DbType
+        Dim typeCode As TypeCode = Type.GetTypeCode(vParam.GetType())
+        Return ToDbType(typeCode)
+    End Function
+
+    Public Shared Function ToTypeCode(ByVal [dbType] As Data.DbType) As TypeCode
+        Select Case [DbType]
+            Case Data.DbType.AnsiString
+            Case Data.DbType.AnsiStringFixedLength
+            Case Data.DbType.[String]
+            Case Data.DbType.StringFixedLength
+                Return TypeCode.[String]
+            Case Data.DbType.[Boolean]
+                Return TypeCode.[Boolean]
+            Case Data.DbType.[Byte]
+                Return TypeCode.[Byte] ' ???
+            Case Data.DbType.VarNumeric, Data.DbType.Currency, Data.DbType.[Decimal]
+                Return TypeCode.[Decimal] ' new Katmai type
+            Case Data.DbType.[Date], Data.DbType.DateTime, Data.DbType.DateTime2, Data.DbType.Time
+                Return TypeCode.DateTime ' new Katmai type - no TypeCode for TimeSpan
+            Case Data.DbType.[Double]
+                Return TypeCode.[Double]
+            Case Data.DbType.Int16
+                Return TypeCode.Int16
+            Case Data.DbType.Int32
+                Return TypeCode.Int32
+            Case Data.DbType.Int64
+                Return TypeCode.Int64
+            Case Data.DbType.[SByte]
+                Return TypeCode.[SByte]
+            Case Data.DbType.[Single]
+                Return TypeCode.[Single]
+            Case Data.DbType.UInt16
+                Return TypeCode.UInt16
+            Case Data.DbType.UInt32
+                Return TypeCode.UInt32
+            Case Data.DbType.UInt64
+                Return TypeCode.UInt64 ' ???
+            Case Data.DbType.Guid
+            Case Data.DbType.Binary
+            Case Data.DbType.[Object]
+            Case Data.DbType.DateTimeOffset
+            Case Else
+                Return TypeCode.[Object] ' new Katmai type - no TypeCode for DateTimeOffset
+        End Select
+    End Function
+
+    Public Shared Function ToDbType(ByVal [typeCode] As TypeCode) As DbType
+        ' no TypeCode equivalent for TimeSpan or DateTimeOffset
+        Select Case [typeCode]
+            Case typeCode.[Boolean]
+                Return Data.DbType.[Boolean]
+            Case typeCode.[Byte]
+                Return Data.DbType.[Byte]
+            Case typeCode.[Char]
+                Return Data.DbType.StringFixedLength ' ???
+            Case typeCode.DateTime
+                Return Data.DbType.DateTime ' Used for Date, DateTime and DateTime2 DbTypes
+            Case typeCode.[Decimal]
+                Return Data.DbType.[Decimal]
+            Case typeCode.[Double]
+                Return Data.DbType.[Double]
+            Case typeCode.Int16
+                Return Data.DbType.Int16
+            Case typeCode.Int32
+                Return Data.DbType.Int32
+            Case typeCode.Int64
+                Return Data.DbType.Int64
+            Case typeCode.[SByte]
+                Return Data.DbType.[SByte]
+            Case typeCode.[Single]
+                Return Data.DbType.[Single]
+            Case typeCode.[String]
+                Return Data.DbType.[String]
+            Case typeCode.UInt16
+                Return Data.DbType.UInt16
+            Case typeCode.UInt32
+                Return Data.DbType.UInt32
+            Case typeCode.UInt64
+                Return Data.DbType.UInt64
+            Case typeCode.DBNull
+            Case typeCode.Empty
+            Case typeCode.[Object]
+            Case Else
+                Return Data.DbType.[Object]
+        End Select
+    End Function
+
+    
+
+#End Region
+
+End Class
+
+#Region "自動執行所有testedClassType內的Public Function"
+#If 0 Then
+    ''' <summary>自動執行所有testedClassType內的Public Function</summary>
+    ''' <typeparam name="testedClassType">被測Class</typeparam>
+    ''' <param name="ts">測試資料</param>
+    ''' <remarks>
+    ''' 測試Function的參數, 來自TestingSetting內的Field or Property
+    ''' 
+    ''' 
+    ''' For Each ts As TestingSetting In testingSettings
+    '''     Run(Of GenericDb)(ts)
+    ''' Next
+    ''' </remarks>
+    Private Sub Run(Of testedClassType)(ByVal ts As TestingSetting)
+        Dim testedClass As testedClassType = Activator.CreateInstance(GetType(testedClassType))
+        Dim typeTestedClass As Type = testedClass.GetType()
+        Dim mis As MethodInfo() = typeTestedClass.GetMethods()
+        For Each mi As MethodInfo In mis
+            ' 找出所有要被測試的Function (Public都會被測試)
+            If mi.IsPublic AndAlso mi.IsStatic Then
+                Dim args() As Object = Nothing
+                Dim i As Integer = 0
+                ' 在此Function找出所有需要的參數
+                For Each p As ParameterInfo In mi.GetParameters()
+                    Dim nameParameter As String = p.Name
+
+                    ' 在TestingSetting找出名稱相同的Property or Field
+                    Dim o As Object = Nothing
+                    If o Is Nothing Then o = Reflect.GetPropertyValue(ts, nameParameter)
+                    If o Is Nothing Then o = Reflect.GetFieldValue(ts, nameParameter)
+
+                    ' 如果找到名稱相符的參數就將他塞到等會要呼叫Invoke的參數列中
+                    If o IsNot Nothing Then
+                        ReDim Preserve args(i)
+                        args(i) = o
+                        i += 1
+                    End If
+                Next
+                ' 呼叫測試Function
+                mi.Invoke(testedClass, args)
+            End If
+        Next
+    End Sub
+#End If
+#End Region

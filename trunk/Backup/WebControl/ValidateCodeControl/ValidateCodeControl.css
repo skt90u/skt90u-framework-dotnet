@@ -1,0 +1,14 @@
+﻿ValidateCodeControl a, 
+ValidateCodeControl a:link, 
+ValidateCodeControl a:visited  
+{
+    color: #0082CB; 
+    text-decoration: none;
+}
+
+ValidateCodeControl a:hover  
+{
+    color: #390; 
+    text-decoration: underline;
+}
+

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type='text/xsl' href='rsspretty.xsl' version='1.0'?>
+<rss xmlns:mscomdomain="http://msdn.microsoft.com/aboutmsdn/rss/domains" xmlns:mscom="http://msdn.microsoft.com/aboutmsdn/rss/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>Rock Feed</title>
+    <link>#</link>
+    <description>The latest rock information</description>
+    <language>en-us</language>
+    <pubDate>Thu, 20 Jul 2006 18:00:46 GMT</pubDate>
+    <lastBuildDate>Thu, 20 Jul 2006 18:00:46 GMT</lastBuildDate>
+    <ttl>1440</ttl>
+    <item>
+      <title>Rock news</title>
+      <description>Just a description.</description>
+      <link>#</link>
+      <author>Author1</author>
+      <guid isPermaLink="false">Titan_8808</guid>
+      <pubDate>Thu, 20 Jul 2006 17:18:48 GMT</pubDate>
+    </item>
+    <item>
+      <title>More rock news</title>
+      <description>Just a description.</description>
+      <link>#</link>
+      <author>Author1</author>
+      <guid isPermaLink="false">Titan_8808</guid>
+      <pubDate>Thu, 20 Jul 2006 17:18:48 GMT</pubDate>
+    </item>
+    <item>
+      <title>Who loves rock 'n' roll?</title>
+      <description>Just a description.</description>
+      <link>#</link>
+      <author>Author1</author>
+      <guid isPermaLink="false">Titan_8808</guid>
+      <pubDate>Thu, 20 Jul 2006 17:18:48 GMT</pubDate>
+    </item>
+    <item>
+      <title>Rock 'n' roll everywhere?</title>
+      <description>Just a description.</description>
+      <link>#</link>
+      <author>Author1</author>
+      <guid isPermaLink="false">Titan_8808</guid>
+      <pubDate>Thu, 20 Jul 2006 17:18:48 GMT</pubDate>
+    </item>
+    <item>
+      <title>Rock 'n' roll lives on</title>
+      <description>Just a description.</description>
+      <link>#</link>
+      <author>Author1</author>
+      <guid isPermaLink="false">Titan_8808</guid>
+      <pubDate>Thu, 20 Jul 2006 17:18:48 GMT</pubDate>
+    </item>    
+  </channel>
+</rss>

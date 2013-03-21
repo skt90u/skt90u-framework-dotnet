@@ -1,0 +1,28 @@
+﻿div.AspNet-GridView table
+{
+	border:solid 1px black;
+}
+caption.AspNet-GridView-Caption
+{
+	padding:4px;
+	background-color:black;
+	color:white;
+}
+div.AspNet-GridView tr
+{
+	background-color:White;
+}
+tr.AspNet-GridView-Alternate 
+{
+	background-color:Gray;
+}
+div.AspNet-GridView td, div.AspNet-GridView th
+{
+	padding:2px;
+	border:solid 1px #333333;
+	border-collapse:collapse;
+}
+.gvTitle { color: Red; }
+.gvRow { color: Green; }
+.gvAltRow { color: Blue; }
+

@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{93F183BC-99EC-43D3-B789-E56E297329B8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JUtil.Web</RootNamespace>
+    <AssemblyName>JUtil.Web</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>JUtil.Web.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AspNetControlAccessor\AspNetControlAccessor.cs" />
+    <Compile Include="AspNetControlAccessor\Impl\ControlAccessorImpl\DropDownListAccessor.cs" />
+    <Compile Include="AspNetControlAccessor\Impl\ControlAccessorImpl\CheckBoxAccessor.cs" />
+    <Compile Include="AspNetControlAccessor\Impl\ControlAccessorImpl\LabelAccessor.cs" />
+    <Compile Include="AspNetControlAccessor\Impl\ControlAccessorImpl\RadioButtonListAccessor.cs" />
+    <Compile Include="AspNetControlAccessor\Impl\ControlAccessorImpl\ListBoxAccessor.cs" />
+    <Compile Include="AspNetControlAccessor\Impl\IControlAccessor.cs" />
+    <Compile Include="AspNetControlAccessor\Impl\ControlAccessorImpl\TextBoxAccessor.cs" />
+    <Compile Include="BrowserDetecter.cs" />
+    <Compile Include="BusinessLogicLayer\BLL.cs" />
+    <Compile Include="ClientScriptManager\ClientScriptManager.cs" />
+    <Compile Include="Extensions\ExtButton.cs" />
+    <Compile Include="Extensions\ExtControl.cs" />
+    <Compile Include="Extensions\ExtGridview.cs" />
+    <Compile Include="Extensions\ExtGridviewRow.cs" />
+    <Compile Include="Extensions\ExtListViewItem.cs" />
+    <Compile Include="Extensions\ExtPage.cs" />
+    <Compile Include="Extensions\ExtWebControl.cs" />
+    <Compile Include="Extensions\ExtListView.cs" />
+    <Compile Include="Extensions\ExtListControl.cs" />
+    <Compile Include="JsonConverter.cs" />
+    <Compile Include="Lookup\LookupBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StateManagement\StateManagement.cs" />
+    <Compile Include="StateManagement\StateManagementAdapter.cs" />
+    <Compile Include="WebControls\BaseClass\CompositeControlExtender.cs" />
+    <Compile Include="WebControls\DualList\DualList.cs" />
+    <Compile Include="WebControls\LightBox\LightBox.cs" />
+    <Compile Include="WebControls\TextBox\DateEdit\DateEdit.cs" />
+    <Compile Include="WebControls\TextBox\NumEdit\NumEdit.cs" />
+    <Compile Include="WebControls\CheckBox\XCheckBox\XCheckBox.cs" />
+    <Compile Include="WebControls\TextBox\XTextBox.cs" />
+    <Compile Include="WebControls\TextBox\XTextArea\TextArea.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebControls\%28失敗作品%29XGridView.cs" />
+    <Compile Include="WebControls\uploadify\uploadify.cs" />
+    <Compile Include="WebControls\WebStyle\WebStyle.cs" />
+    <Compile Include="WebControls\XListView.cs" />
+    <Compile Include="WebControls\XDropDownList.cs" />
+    <Compile Include="Utils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ClientScriptManager\AjaxIssues.txt" />
+    <Content Include="JavaScript\AjaxControlToolKitPlugin\AjaxControlToolKitPlugin.js" />
+    <Content Include="JavaScript\ControlAccessor\ControlAccessor.js" />
+    <Content Include="JavaScript\ControlAccessor\Dependence.txt" />
+    <Content Include="JavaScript\ControlAccessor\Impl\AspNetControlHelperManager.js" />
+    <Content Include="JavaScript\ControlAccessor\Impl\ControlAccessorImpl\BulletedListHelper.js" />
+    <Content Include="JavaScript\ControlAccessor\Impl\ControlAccessorImpl\CheckBoxListHelper.js" />
+    <Content Include="JavaScript\ControlAccessor\Impl\ControlAccessorImpl\ddComboHelper.js" />
+    <Content Include="JavaScript\ControlAccessor\Impl\ControlAccessorImpl\DropDownListHelper.js" />
+    <Content Include="JavaScript\ControlAccessor\Impl\ControlAccessorImpl\HiddenFieldHelper.js" />
+    <Content Include="JavaScript\ControlAccessor\Impl\ControlAccessorImpl\LabelHelper.js" />
+    <Content Include="JavaScript\ControlAccessor\Impl\ControlAccessorImpl\RadioButtonListHelper.js" />
+    <Content Include="JavaScript\ControlAccessor\Impl\ControlAccessorImpl\TextBoxHelper.js" />
+    <Content Include="JavaScript\ControlAccessor\Impl\ControlAccessorImpl\ButtonHelper.js" />
+    <Content Include="JavaScript\Framework\Dependence.txt" />
+    <Content Include="JavaScript\Framework\Interface.js" />
+    <EmbeddedResource Include="JavaScript\jutil-all-debug.js" />
+    <EmbeddedResource Include="JavaScript\jutil-all.js" />
+    <Content Include="JavaScript\Framework\jquery.js" />
+    <Content Include="JavaScript\Framework\json2.js" />
+    <Content Include="JavaScript\Log\Dependence.txt" />
+    <Content Include="JavaScript\Log\Impl\ChromeConsole.js" />
+    <Content Include="JavaScript\Log\Impl\EmptyConsole.js" />
+    <Content Include="JavaScript\Log\Impl\FirefoxConsole.js" />
+    <Content Include="JavaScript\Log\Impl\IEConsole.js" />
+    <Content Include="JavaScript\Log\Dependence\jquery.browser.extension.js" />
+    <Content Include="JavaScript\Log\Dependence\jquery.sprintf.js" />
+    <Content Include="JavaScript\Log\Impl\log4javascript.js" />
+    <Content Include="JavaScript\Log\Log.js" />
+    <Content Include="JavaScript\Log\Impl\SafariConsole.js" />
+    <Content Include="JavaScript\MessageBox\Dependence.txt" />
+    <EmbeddedResource Include="JavaScript\MessageBox\jquery.alerts.js" />
+    <Content Include="JavaScript\WebService\Dependence.txt" />
+    <Content Include="JavaScript\WebService\WebService.js" />
+    <EmbeddedResource Include="WebControls\LightBox\images\lightbox-ico-loading.gif" />
+    <EmbeddedResource Include="WebControls\LightBox\images\lightbox-btn-next.gif" />
+    <EmbeddedResource Include="WebControls\LightBox\images\lightbox-btn-close.gif" />
+    <EmbeddedResource Include="WebControls\LightBox\images\lightbox-btn-prev.gif" />
+    <EmbeddedResource Include="WebControls\LightBox\images\lightbox-blank.gif" />
+    <EmbeddedResource Include="WebControls\LightBox\js\jquery.lightbox-0.5.js" />
+    <EmbeddedResource Include="WebControls\LightBox\css\jquery.lightbox-0.5.css" />
+    <EmbeddedResource Include="WebControls\DualList\css\DualList.css" />
+    <EmbeddedResource Include="WebControls\DualList\scripts\jQuery.dualListBox-1.3.js" />
+    <EmbeddedResource Include="WebControls\DualList\images\AllToL.png" />
+    <EmbeddedResource Include="WebControls\DualList\images\AllToR.png" />
+    <EmbeddedResource Include="WebControls\DualList\images\Clear.png" />
+    <EmbeddedResource Include="WebControls\DualList\images\MoveToL.png" />
+    <EmbeddedResource Include="WebControls\DualList\images\MoveToR.png" />
+    <EmbeddedResource Include="WebControls\WebStyle\jAlert\jquery.alerts.css" />
+    <EmbeddedResource Include="WebControls\WebStyle\jAlert\images\title.gif" />
+    <EmbeddedResource Include="WebControls\WebStyle\jAlert\images\info.gif" />
+    <EmbeddedResource Include="WebControls\WebStyle\jAlert\images\important.gif" />
+    <EmbeddedResource Include="WebControls\WebStyle\jAlert\images\help.gif" />
+    <EmbeddedResource Include="WebControls\uploadify\css\uploadify.css" />
+    <EmbeddedResource Include="WebControls\uploadify\css\uploadify.default.css" />
+    <EmbeddedResource Include="WebControls\uploadify\images\button.jpg" />
+    <EmbeddedResource Include="WebControls\uploadify\images\cancel.png" />
+    <EmbeddedResource Include="WebControls\uploadify\scripts\expressInstall.swf" />
+    <EmbeddedResource Include="WebControls\uploadify\scripts\jquery-1.3.2.min.js" />
+    <EmbeddedResource Include="WebControls\uploadify\scripts\jquery.uploadify.v2.1.0.js" />
+    <EmbeddedResource Include="WebControls\uploadify\scripts\jquery.uploadify.v2.1.0.min.js" />
+    <EmbeddedResource Include="WebControls\uploadify\scripts\swfobject.js" />
+    <EmbeddedResource Include="WebControls\uploadify\scripts\uploadify.sample.js" />
+    <EmbeddedResource Include="WebControls\uploadify\scripts\uploadify.swf" />
+    <EmbeddedResource Include="WebControls\jQuery\jquery.1.4.4.js" />
+    <EmbeddedResource Include="WebControls\TextBox\DateEdit\Calendar.png" />
+    <EmbeddedResource Include="WebControls\TextBox\DateEdit\DateEdit.css" />
+    <EmbeddedResource Include="WebControls\TextBox\XTextArea\jquery.elastic.js" />
+    <EmbeddedResource Include="WebControls\TextBox\XTextArea\jquery.elastic.source.js" />
+    <EmbeddedResource Include="WebControls\TextBox\XTextArea\jquery.textareaCounter.css" />
+    <EmbeddedResource Include="WebControls\TextBox\XTextArea\jquery.textareaCounter.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JavaScript\Framework\pack.bat" />
+    <None Include="JavaScript\Log\pack.bat" />
+    <None Include="JavaScript\MessageBox\pack.bat" />
+    <None Include="JavaScript\WebService\pack.bat" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.0.30512.17815, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>WebControls\required\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="JUtil, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\JFramework\.NET Framework 3.5\JUtil.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="TimePicker, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d25e9f59e49c4d2f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>WebControls\required\TimePicker.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+</Project>
